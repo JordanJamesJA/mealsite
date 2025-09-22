@@ -8,7 +8,330 @@
       content="Meals, Ingredients, Recipes, Steak, Salmon, Salad Lobster, Shrimp, Ravioli"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meal Site</title>
+    <title>Meal Site</title><!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>FlavorCraft - Delicious Recipes & Culinary Adventures | Home</title>
+    <meta name="description" content="Discover amazing recipes, cooking tips, and culinary inspiration at FlavorCraft. From quick weeknight dinners to gourmet weekend projects, find your next favorite dish.">
+    <meta name="keywords" content="recipes, cooking, food, meals, culinary, kitchen, ingredients, gourmet, healthy eating, meal planning">
+    <meta name="author" content="FlavorCraft Team">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://flavorcraft.com/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="FlavorCraft - Delicious Recipes & Culinary Adventures">
+    <meta property="og:description" content="Discover amazing recipes, cooking tips, and culinary inspiration. Find your next favorite dish with our curated collection of recipes.">
+    <meta property="og:image" content="/img/og-image.jpg">
+    <meta property="og:url" content="https://flavorcraft.com/">
+    <meta property="og:site_name" content="FlavorCraft">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FlavorCraft - Delicious Recipes & Culinary Adventures">
+    <meta name="twitter:description" content="Discover amazing recipes, cooking tips, and culinary inspiration.">
+    <meta name="twitter:image" content="/img/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/css/index.css" as="style">
+    <link rel="preload" href="/js/app.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/index.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "FlavorCraft",
+        "description": "Discover amazing recipes, cooking tips, and culinary inspiration",
+        "url": "https://flavorcraft.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://flavorcraft.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "FlavorCraft",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://flavorcraft.com/logo.png"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
+    
+    <!-- Header Navigation -->
+    <header role="banner">
+        <nav id="header" role="navigation" aria-label="Main navigation">
+            <a href="index.html" class="logo" aria-label="FlavorCraft home">
+                <span class="logo-icon">🍽️</span>
+                <span class="logo-text">FlavorCraft</span>
+            </a>
+            
+            <!-- Mobile menu toggle -->
+            <button id="toggle" 
+                    class="menu-toggle" 
+                    aria-label="Toggle mobile menu" 
+                    aria-expanded="false" 
+                    aria-controls="navbar">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <!-- Navigation menu -->
+            <div id="navbar" class="navbar" role="menu">
+                <ul class="nav-links" role="menubar">
+                    <li role="none"><a href="/index.html" role="menuitem" aria-current="page">Home</a></li>
+                    <li role="none"><a href="/meals.html" role="menuitem">Recipes</a></li>
+                    <li role="none"><a href="/about.html" role="menuitem">About</a></li>
+                    <li role="none"><a href="/contact.html" role="menuitem">Contact</a></li>
+                    <li role="none"><a href="/saved-recipes.html" role="menuitem">Saved Recipes</a></li>
+                    <li role="none"><a href="/login.html" role="menuitem" class="login-btn">Log In</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section class="hero" aria-label="Featured recipes showcase">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Culinary <span class="highlight">Adventures</span> Await
+                    </h1>
+                    <p class="hero-subtitle">
+                        Discover mouth-watering recipes, master new techniques, and transform your kitchen into a culinary paradise.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="/meals.html" class="btn btn-primary" aria-label="Explore all recipes">
+                            Explore Recipes
+                        </a>
+                        <a href="/about.html" class="btn btn-secondary" aria-label="Learn more about FlavorCraft">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="recipe-carousel" aria-label="Featured recipe slideshow">
+                        <div class="carousel-track" id="carousel-track">
+                            <div class="recipe-slide active" data-recipe="curried-shrimp">
+                                <img src="/img/curried-shrimp.jpg" alt="Delicious curry-coconut shrimp dish" loading="eager">
+                                <div class="slide-info">
+                                    <h3>Curry-Coconut Shrimp</h3>
+                                    <p>20 min • Easy • 5 stars</p>
+                                </div>
+                            </div>
+                            <div class="recipe-slide" data-recipe="lobster-ravioli">
+                                <img src="/img/lobster-ravioli.jpg" alt="Gourmet lobster-filled ravioli" loading="lazy">
+                                <div class="slide-info">
+                                    <h3>Lobster Ravioli</h3>
+                                    <p>45 min • Medium • 5 stars</p>
+                                </div>
+                            </div>
+                            <div class="recipe-slide" data-recipe="pan-seared-salmon">
+                                <img src="/img/pan-seared-salmon.jpg" alt="Perfect pan-seared salmon fillet" loading="lazy">
+                                <div class="slide-info">
+                                    <h3>Pan-Seared Salmon</h3>
+                                    <p>25 min • Easy • 5 stars</p>
+                                </div>
+                            </div>
+                            <div class="recipe-slide" data-recipe="pan-seared-steak">
+                                <img src="/img/pan-seared-steak.jpg" alt="Juicy pan-seared steak" loading="lazy">
+                                <div class="slide-info">
+                                    <h3>Pan-Seared Steak</h3>
+                                    <p>30 min • Medium • 5 stars</p>
+                                </div>
+                            </div>
+                            <div class="recipe-slide" data-recipe="steakhouse-salad">
+                                <img src="/img/steakhouse-salad.jpg" alt="Fresh mushroom kale salad" loading="lazy">
+                                <div class="slide-info">
+                                    <h3>Mushroom Kale Salad</h3>
+                                    <p>15 min • Easy • 4 stars</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Carousel controls -->
+                        <button class="carousel-btn prev" id="prev-btn" aria-label="Previous recipe">‹</button>
+                        <button class="carousel-btn next" id="next-btn" aria-label="Next recipe">›</button>
+                        
+                        <!-- Carousel indicators -->
+                        <div class="carousel-indicators" role="group" aria-label="Recipe slideshow pagination">
+                            <button class="indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+                            <button class="indicator" data-slide="1" aria-label="Go to slide 2"></button>
+                            <button class="indicator" data-slide="2" aria-label="Go to slide 3"></button>
+                            <button class="indicator" data-slide="3" aria-label="Go to slide 4"></button>
+                            <button class="indicator" data-slide="4" aria-label="Go to slide 5"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll down indicator -->
+            <div class="scroll-indicator" aria-label="Scroll down to see more content">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- Featured Recipes Section -->
+        <section class="featured-recipes" aria-labelledby="featured-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="featured-title">Featured Recipes</h2>
+                    <p>Hand-picked recipes that our community loves</p>
+                </header>
+                
+                <div class="featured-grid">
+                    <div class="featured-card">
+                        <img src="/img/pan-seared-steak.jpg" alt="Pan-Seared Steak" loading="lazy">
+                        <div class="featured-content">
+                            <h3>Pan-Seared Steak</h3>
+                            <p>Perfect restaurant-quality steak at home</p>
+                            <a href="/meals.html#pan-seared-steak" class="btn btn-outline">View Recipe</a>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-card">
+                        <img src="/img/curried-shrimp.jpg" alt="Curry-Coconut Shrimp" loading="lazy">
+                        <div class="featured-content">
+                            <h3>Curry-Coconut Shrimp</h3>
+                            <p>Quick and flavorful weeknight dinner</p>
+                            <a href="/meals.html#curried-shrimp" class="btn btn-outline">View Recipe</a>
+                        </div>
+                    </div>
+                    
+                    <div class="featured-card">
+                        <img src="/img/lobster-ravioli.jpg" alt="Lobster Ravioli" loading="lazy">
+                        <div class="featured-content">
+                            <h3>Lobster Ravioli</h3>
+                            <p>Luxurious pasta for special occasions</p>
+                            <a href="/meals.html#lobster-ravioli" class="btn btn-outline">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats Section -->
+        <section class="stats" aria-labelledby="stats-title">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-count="500">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Delicious Recipes</span>
+                    </div>
+                    <div class="stat-item" data-count="10000">
+                        <span class="stat-number">10K+</span>
+                        <span class="stat-label">Happy Cooks</span>
+                    </div>
+                    <div class="stat-item" data-count="50">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Cuisine Types</span>
+                    </div>
+                    <div class="stat-item" data-count="95">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" aria-label="Site footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about-us" aria-labelledby="about-title">
+                    <h3 id="about-title">About FlavorCraft</h3>
+                    <p>
+                        FlavorCraft is your ultimate culinary companion, bringing together passionate cooks from around the world. 
+                        We believe that great food brings people together and that everyone can learn to cook amazing meals.
+                    </p>
+                    <div class="social-links" role="group" aria-label="Social media links">
+                        <a href="#" class="social-link facebook" aria-label="Follow us on Facebook">
+                            <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="24" height="24">
+                        </a>
+                        <a href="#" class="social-link twitter" aria-label="Follow us on Twitter">
+                            <img src="https://img.icons8.com/fluency/48/000000/twitter.png" alt="Twitter" width="24" height="24">
+                        </a>
+                        <a href="#" class="social-link instagram" aria-label="Follow us on Instagram">
+                            <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram" width="24" height="24">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section quick-links" aria-labelledby="links-title">
+                    <h3 id="links-title">Quick Links</h3>
+                    <ul role="menu">
+                        <li role="none"><a href="/meals.html" role="menuitem">All Recipes</a></li>
+                        <li role="none"><a href="/about.html" role="menuitem">About Us</a></li>
+                        <li role="none"><a href="/contact.html" role="menuitem">Contact</a></li>
+                        <li role="none"><a href="/saved-recipes.html" role="menuitem">Saved Recipes</a></li>
+                        <li role="none"><a href="/login.html" role="menuitem">Login</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section contact-info" aria-labelledby="contact-title">
+                    <h3 id="contact-title">Get in Touch</h3>
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png" alt="Address" width="16" height="16" aria-hidden="true">
+                        <span>123 Culinary Street<br>Flavor Town, FT 12345</span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png" alt="Phone" width="16" height="16" aria-hidden="true">
+                        <span>
+                            <a href="tel:+1234567890" aria-label="Call us at +1 234 567 8900">+1 (234) 567-8900</a>
+                        </span>
+                    </div>
+                    <div class="contact-item">
+                        <img src="https://img.icons8.com/material-rounded/24/000000/mail.png" alt="Email" width="16" height="16" aria-hidden="true">
+                        <span>
+                            <a href="mailto:hello@flavorcraft.com" aria-label="Send us an email">hello@flavorcraft.com</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 FlavorCraft. All rights reserved. Made with love for food lovers everywhere.</p>
+                <div class="footer-links">
+                    <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
+                    <a href="#terms" aria-label="Terms of Service">Terms of Service</a>
+                    <a href="#cookies" aria-label="Cookie Policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="/js/app.js" defer></script>
+</body>
+</html>
     <link rel="stylesheet" href="/css/index.css" />
   </head>
   <body>

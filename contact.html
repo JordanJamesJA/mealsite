@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>Contact Us - FlavorCraft | Get in Touch</title>
+    <meta
+      name="description"
+      content="Contact FlavorCraft for recipe questions, feedback, partnerships, or support. We'd love to hear from you and help with your culinary journey."
+    />
+    <meta
+      name="keywords"
+      content="contact FlavorCraft, recipe support, cooking help, food blog contact, culinary feedback"
+    />
+    <meta name="author" content="FlavorCraft Team" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://flavorcraft.com/contact.html" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/meal.css" />
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+
+    <!-- Header Navigation -->
+    <header role="banner">
+      <nav id="header" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="FlavorCraft home">
+          <span class="logo-icon">🍽️</span>
+          <span class="logo-text">FlavorCraft</span>
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          id="toggle"
+          class="menu-toggle"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation menu -->
+        <div id="navbar" class="navbar" role="menu">
+          <ul class="nav-links" role="menubar">
+            <li role="none"><a href="/index.html" role="menuitem">Home</a></li>
+            <li role="none">
+              <a href="/meals.html" role="menuitem">Recipes</a>
+            </li>
+            <li role="none"><a href="/about.html" role="menuitem">About</a></li>
+            <li role="none">
+              <a href="/contact.html" role="menuitem" aria-current="page"
+                >Contact</a
+              >
+            </li>
+            <li role="none">
+              <a href="/saved-recipes.html" role="menuitem">Saved Recipes</a>
+            </li>
+            <li role="none">
+              <a href="/login.html" role="menuitem" class="login-btn">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- Page Header -->
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="container">
+          <div class="page-header">
+            <h1 id="page-title">Contact Us</h1>
+            <p class="page-subtitle">
+              We'd love to hear from you! Get in touch with any questions,
+              feedback, or ideas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Content -->
+      <section class="contact-content">
+        <div class="container">
+          <!-- Contact Form Section -->
+          <div class="contact-grid">
+            <div class="contact-form-section">
+              <h2>Send us a Message</h2>
+              <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    aria-describedby="name-help"
+                  />
+                  <small id="name-help">Please enter your full name</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    aria-describedby="email-help"
+                  />
+                  <small id="email-help"
+                    >We'll use this to respond to your message</small
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    required
+                    aria-describedby="subject-help"
+                  >
+                    <option value="">Please select a topic</option>
+                    <option value="recipe-question">Recipe Question</option>
+                    <option value="technical-support">Technical Support</option>
+                    <option value="recipe-submission">Recipe Submission</option>
+                    <option value="partnership">Partnership Inquiry</option>
+                    <option value="feedback">General Feedback</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <small id="subject-help"
+                    >Choose the topic that best describes your message</small
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required
+                    aria-describedby="message-help"
+                    placeholder="Tell us how we can help you..."
+                  ></textarea>
+                  <small id="message-help"
+                    >Please provide as much detail as possible</small
+                  >
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="newsletter" name="newsletter" />
+                    <span class="checkmark"></span>
+                    Subscribe to our newsletter for recipe updates and cooking
+                    tips
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  Send Message
+                </button>
+              </form>
+            </div>
+
+            <!-- Contact Info Section -->
+            <div class="contact-info-section">
+              <h2>Get in Touch</h2>
+
+              <div class="contact-method">
+                <div class="contact-icon">📧</div>
+                <div class="contact-details">
+                  <h3>Email</h3>
+                  <p>
+                    <a href="mailto:hello@flavorcraft.com"
+                      >hello@flavorcraft.com</a
+                    >
+                  </p>
+                  <small>We typically respond within 24 hours</small>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-icon">📞</div>
+                <div class="contact-details">
+                  <h3>Phone</h3>
+                  <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                  <small>Monday - Friday, 9 AM - 6 PM EST</small>
+                </div>
+              </div>
+
+              <div class="contact-method">
+                <div class="contact-icon">📍</div>
+                <div class="contact-details">
+                  <h3>Address</h3>
+                  <p>123 Culinary Street<br />Flavor Town, FT 12345</p>
+                  <small>Visit our test kitchen by appointment</small>
+                </div>
+              </div>
+
+              <div class="social-contact">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                  <a
+                    href="#"
+                    class="social-link facebook"
+                    aria-label="Follow us on Facebook"
+                  >
+                    <img
+                      src="https://img.icons8.com/color/48/000000/facebook-new.png"
+                      alt="Facebook"
+                      width="32"
+                      height="32"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="social-link twitter"
+                    aria-label="Follow us on Twitter"
+                  >
+                    <img
+                      src="https://img.icons8.com/fluency/48/000000/twitter.png"
+                      alt="Twitter"
+                      width="32"
+                      height="32"
+                    />
+                  </a>
+                  <a
+                    href="#"
+                    class="social-link instagram"
+                    aria-label="Follow us on Instagram"
+                  >
+                    <img
+                      src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
+                      alt="Instagram"
+                      width="32"
+                      height="32"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+              <div class="faq-item">
+                <h3>How do I submit my own recipe?</h3>
+                <p>
+                  We'd love to feature your recipes! Use our contact form above
+                  with the subject "Recipe Submission" and include your recipe
+                  details, photos, and a brief story about the dish.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Can I modify the recipes?</h3>
+                <p>
+                  Absolutely! Our recipes are starting points. Feel free to
+                  adjust ingredients, seasonings, and techniques to match your
+                  taste preferences and dietary needs.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Do you offer cooking classes?</h3>
+                <p>
+                  We occasionally host virtual cooking classes and workshops.
+                  Subscribe to our newsletter or follow us on social media to
+                  stay updated on upcoming events.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>How can I become a recipe tester?</h3>
+                <p>
+                  We're always looking for passionate home cooks to test our
+                  recipes! Contact us with "Recipe Tester" in the subject line
+                  and tell us about your cooking experience.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>Can I use your recipes commercially?</h3>
+                <p>
+                  Our recipes are for personal use. If you'd like to use them
+                  commercially or republish them, please contact us to discuss
+                  licensing options.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>I'm having trouble with a recipe. Can you help?</h3>
+                <p>
+                  Of course! Use our contact form with "Recipe Question" as the
+                  subject, and include details about what went wrong. We're here
+                  to help you succeed in the kitchen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about-us" aria-labelledby="about-title">
+            <h3 id="about-title">About FlavorCraft</h3>
+            <p>
+              FlavorCraft is your ultimate culinary companion, bringing together
+              passionate cooks from around the world. We believe that great food
+              brings people together and that everyone can learn to cook amazing
+              meals.
+            </p>
+            <div
+              class="social-links"
+              role="group"
+              aria-label="Social media links"
+            >
+              <a
+                href="#"
+                class="social-link facebook"
+                aria-label="Follow us on Facebook"
+              >
+                <img
+                  src="https://img.icons8.com/color/48/000000/facebook-new.png"
+                  alt="Facebook"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="#"
+                class="social-link twitter"
+                aria-label="Follow us on Twitter"
+              >
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/twitter.png"
+                  alt="Twitter"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="#"
+                class="social-link instagram"
+                aria-label="Follow us on Instagram"
+              >
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
+                  alt="Instagram"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section quick-links" aria-labelledby="links-title">
+            <h3 id="links-title">Quick Links</h3>
+            <ul role="menu">
+              <li role="none">
+                <a href="/meals.html" role="menuitem">All Recipes</a>
+              </li>
+              <li role="none">
+                <a href="/about.html" role="menuitem">About Us</a>
+              </li>
+              <li role="none">
+                <a href="/contact.html" role="menuitem">Contact</a>
+              </li>
+              <li role="none">
+                <a href="/saved-recipes.html" role="menuitem">Saved Recipes</a>
+              </li>
+              <li role="none">
+                <a href="/login.html" role="menuitem">Login</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="footer-section contact-info"
+            aria-labelledby="contact-title"
+          >
+            <h3 id="contact-title">Get in Touch</h3>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
+                alt="Address"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>123 Culinary Street<br />Flavor Town, FT 12345</span>
+            </div>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
+                alt="Phone"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>
+                <a
+                  href="tel:+1234567890"
+                  aria-label="Call us at +1 234 567 8900"
+                  >+1 (234) 567-8900</a
+                >
+              </span>
+            </div>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/material-rounded/24/000000/mail.png"
+                alt="Email"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>
+                <a
+                  href="mailto:hello@flavorcraft.com"
+                  aria-label="Send us an email"
+                  >hello@flavorcraft.com</a
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 FlavorCraft. All rights reserved. Made with ❤️ for food
+            lovers everywhere.
+          </p>
+          <div class="footer-links">
+            <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href="#terms" aria-label="Terms of Service">Terms of Service</a>
+            <a href="#cookies" aria-label="Cookie Policy">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      ↑
+    </button>
+
+    <!-- Scripts -->
+    <script src="/js/app.js" defer></script>
+  </body>
+</html>

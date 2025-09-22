@@ -1,215 +1,914 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="description" content="Free Meal Recipes and Ingredients" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>Delicious Recipes - FlavorCraft | Discover Amazing Dishes</title>
+    <meta
+      name="description"
+      content="Browse our collection of delicious recipes including pan-seared steak, curry-coconut shrimp, lobster ravioli, salmon, and healthy salads. Easy-to-follow cooking instructions."
+    />
     <meta
       name="keywords"
-      content="Meals, Ingredients, Recipes, Steak, Salmon, Salad Lobster, Shrimp, Ravioli"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meal Site</title>
-    <link rel="stylesheet" href="/css/meal.css">
-</head>
-<body>
-    <!-- HEADER -->
-    <nav id="header">
-        <a href="/index.html" class="logo">Lorem</a>
-        <div id="toggle"></div>
-        <div id="navbar">
-            <ul class="nav-links">
-                <li><a href="/">HOME</a></li>
-                <li><a href="/meals.html">MEALS</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">LOG IN</a></button>
-                </ul>
-              </div>
-            </nav>
-            
-            <script src="/js/app.js"></script>
-            <!-- END HEADER -->
-            
-            <!-- CONTENT SECTION  -->
-            <section class="ms-container">
-              <div class="meals-heading">
-                <h1>Try Our Healthy Dishes!</h1>
-              </div> 
-              <div class="grid-box">
-                
-            <div class="flexbox meals seared-steak">
-              <div>
-                <img src="./img/pan-seared-steak.jpg" alt="pan-seared-steak">
-              </div>
-              <div>
-              <h2>Pan Seared Steak</h2>
-              <h3>Ingredients</h3>
-              <ul>
-                <li>1 steak (approx. 1 lbs.)</li>
-                <li>Kosher salt</li>
-                <li>Black pepper</li>
-                <li>1 tablespoon olive oil</li>
-                <li>1/4 cup butter</li>
-                <li>2 large sprigs of rosemary</li>
-                <li>3 garlic cloves, crushed</li>
-              </ul>
+      content="recipes, cooking, pan-seared steak, curry shrimp, lobster ravioli, salmon recipes, healthy salads, cooking instructions, ingredients"
+    />
+    <meta name="author" content="FlavorCraft Team" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://flavorcraft.com/meals.html" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Delicious Recipes - FlavorCraft" />
+    <meta
+      property="og:description"
+      content="Browse our collection of delicious recipes with easy-to-follow cooking instructions."
+    />
+    <meta property="og:image" content="/img/recipes-og.jpg" />
+    <meta property="og:url" content="https://flavorcraft.com/meals.html" />
+    <meta property="og:site_name" content="FlavorCraft" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Delicious Recipes - FlavorCraft" />
+    <meta
+      name="twitter:description"
+      content="Browse our collection of delicious recipes with easy-to-follow cooking instructions."
+    />
+    <meta name="twitter:image" content="/img/recipes-twitter.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/css/meal.css" as="style" />
+    <link rel="preload" href="/js/app.js" as="script" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/meal.css" />
+
+    <!-- JSON-LD Structured Data for Recipes -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "FlavorCraft Recipes",
+        "description": "A collection of delicious recipes from FlavorCraft",
+        "numberOfItems": 5,
+        "itemListElement": [
+          {
+            "@type": "Recipe",
+            "position": 1,
+            "name": "Pan-Seared Steak",
+            "image": "/img/pan-seared-steak.jpg",
+            "description": "Perfect pan-seared steak with herbs and garlic",
+            "cookTime": "PT30M",
+            "prepTime": "PT10M",
+            "recipeYield": "2 servings",
+            "recipeCategory": "Main Course",
+            "recipeCuisine": "American"
+          },
+          {
+            "@type": "Recipe",
+            "position": 2,
+            "name": "Curry-Coconut Shrimp",
+            "image": "/img/curried-shrimp.jpg",
+            "description": "Flavorful curry-coconut shrimp with aromatic spices",
+            "cookTime": "PT20M",
+            "prepTime": "PT15M",
+            "recipeYield": "4 servings",
+            "recipeCategory": "Main Course",
+            "recipeCuisine": "Asian"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+
+    <!-- Header Navigation -->
+    <header role="banner">
+      <nav id="header" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="FlavorCraft home">
+          <span class="logo-icon">🍽️</span>
+          <span class="logo-text">FlavorCraft</span>
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          id="toggle"
+          class="menu-toggle"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation menu -->
+        <div id="navbar" class="navbar" role="menu">
+          <ul class="nav-links" role="menubar">
+            <li role="none"><a href="/index.html" role="menuitem">Home</a></li>
+            <li role="none">
+              <a href="/meals.html" role="menuitem" aria-current="page"
+                >Recipes</a
+              >
+            </li>
+            <li role="none"><a href="#about" role="menuitem">About</a></li>
+            <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            <li role="none">
+              <a href="#login" role="menuitem" class="login-btn">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- Page Header -->
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="container">
+          <div class="page-header">
+            <h1 id="page-title">Discover Amazing Recipes</h1>
+            <p class="page-subtitle">
+              From quick weeknight dinners to gourmet weekend projects
+            </p>
+          </div>
+
+          <!-- Search and Filter Controls -->
+          <div class="controls-section">
+            <div class="search-container">
+              <input
+                type="search"
+                id="recipe-search"
+                class="search-input"
+                placeholder="Search recipes, ingredients, or cuisine..."
+                aria-label="Search recipes"
+              />
+              <button class="search-btn" aria-label="Search recipes">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+              </button>
             </div>
+
+            <div class="filter-controls">
+              <select
+                id="difficulty-filter"
+                class="filter-select"
+                aria-label="Filter by difficulty"
+              >
+                <option value="all">All Difficulty Levels</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+
+              <select
+                id="time-filter"
+                class="filter-select"
+                aria-label="Filter by cooking time"
+              >
+                <option value="all">All Cooking Times</option>
+                <option value="quick">Under 30 min</option>
+                <option value="medium">30-60 min</option>
+                <option value="long">Over 60 min</option>
+              </select>
+
+              <select
+                id="cuisine-filter"
+                class="filter-select"
+                aria-label="Filter by cuisine type"
+              >
+                <option value="all">All Cuisines</option>
+                <option value="american">American</option>
+                <option value="asian">Asian</option>
+                <option value="italian">Italian</option>
+                <option value="mediterranean">Mediterranean</option>
+              </select>
             </div>
-            
-              <div class="flexbox meals curried-shrimp">
-                <div>
-                  <img src="./img/curried-shrimp.jpg" alt="curried-shrimp">
-                </div>
-                <div>
-                  <h2>Curry-Coconut Shrimp</h2>
-                  <h3>Ingredients</h3>
-                  <ul>
-                    <li>1 teaspoon sugar</li>
-                    <li>1 tablespoon water</li>
-                    <li>1 teaspoon canola oil</li>
-                    <li>½ cup minced onion</li>
-                    <li>1 tablespoon cornstarch</li>
-                    <li>1 clove garlic, minced</li>
-                    <li>1 teaspoon ground cumin</li>
-                  <!-- </ul>
-                  <ul> -->
-                    <li>½ teaspoon curry powder</li>
-                    <li>½ cup light coconut milk</li>
-                    <li>¾ teaspoon ground coriander</li>
-                    <li>½ cup minced red bell pepper</li>
-                    <li>¼ teaspoon crushed red pepper flakes</li>
-                    <li>1 pound jumbo shrimp, peeled and deveined</li>
-                    <li>2 tablespoons chopped fresh cilantro</li>
-                  </ul>
-                </div>
-              </div>
+          </div>
+        </div>
+      </section>
 
-              <div class="flexbox meals filled-ravioli">
-                <div>
-                  <img src="./img/lobster-ravioli.jpg" alt="lobster-filled-ravioli">
-                </div>
-                <div>
-                <h2>Lobster Filled Ravioli</h2>
-                <h3>Ingredients</h3>
-                <ul>
-                  <li>2 unit Scallions</li>
-                  <li>10 ounce Shrimp</li>
-                  <li>9 ounce Lobster Ravioli </li>
-                  <li>1.5 ounce Tomato Paste</li>
-                  <li>2 tablespoon Sour Cream</li>
-                  <li>½ cup Panko Breadcrumbs</li>
-                  <li>1 teaspoon Italian Seasoning</li>
-                  <li>2 tablespoon Cream Cheese</li>
-                  <li>¼ cup Parmesan Cheese</li>
-                </ul>
-              </div>
-              </div>
-
-              <div class="flexbox meals seared-salmon">
-                <div>
-                  <img src="./img/pan-seared-salmon.jpg" alt="pan-seared-salmon">
-                </div>
-                <div>
-                <h2>Pan Seared Salmon</h2>
-                <h3>Ingredients</h3>
-                <ul>
-                  <li>Four 5-ounce center-cut salmon fillets (about 1-inch thick)</li> 
-                  <li>4 whole wheat dinner rolls</li>
-                  <li>3 tablespoons fresh lemon juice</li>
-                  <li>3 tablespoons olive oil</li>
-                  <li>Kosher salt</li>
-                  <li>1 bunch kale, ribs removed, leaves very thinly sliced</li>
-                  <li>1/4 cup dates</li>
-                  <li>1 Honeycrisp apple</li>
-                  <li>1/4 cup finely grated pecorino</li>
-                  <li>3 tablespoons toasted slivered almonds</li>
-                  <li>Freshly ground black pepper</li>
-                </ul>
-              </div>
-              </div>
-
-
-              <div class="flexbox meals salad">
-                <div>
-                  <img src="./img/steakhouse-salad.jpg" alt="steakhouse-mushroom-kale-salad">
-                </div>
-                <div>
-                <h2>Mushroom Kale Salad</h2>
-                <h3>Ingredients</h3>
-                <ul>
-                  <li>4 ounce Kale</li>
-                  <li>8 ounce Button Mushrooms</li>
-                  <li>1 unit Shallot</li>
-                  <li>1 unit Green Bell Pepper</li>
-                  <li>1 unit Roma Tomato</li>
-                  <li>1 tablespoon Bold & Savory Steak Spice</li>
-                  <li>1 teaspoon Garlic Powder</li>
-                  <li>2 tablespoon Soy Sauce</li>
-                  <li>5 teaspoon Balsamic Vinegar</li>
-                  <li>2 ounce Creamy Horseradish Sauce</li>
-                  <li>2 tablespoon Yogurt</li>
-                  <li> 2 tablespoon Mayonnaise</li>
-                  <li>4 teaspoon Cooking Oil</li>
-                  <li>1 tablespoon Olive Oil</li>
-                  <li> 1 tablespoon Butter</li>
-                </ul>
-              </div>
-              </div>
+      <!-- Recipes Section -->
+      <section class="recipes-section" aria-labelledby="recipes-title">
+        <div class="container">
+          <div class="recipes-header">
+            <h2 id="recipes-title" class="sr-only">Recipe Collection</h2>
+            <div class="view-toggle">
+              <button
+                class="view-btn active"
+                data-view="grid"
+                aria-pressed="true"
+                aria-label="Grid view"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M10 18h5v-6h-5v6zm-6 0h5V6H4v12zm6-8h5V6h-5v4zm6 8h5v-6h-5v6zm0-8h5V6h-5v4z"
+                  />
+                </svg>
+              </button>
+              <button
+                class="view-btn"
+                data-view="list"
+                aria-pressed="false"
+                aria-label="List view"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M4 14h4v-4H4v4zm0 5h4v-4H4v4zM4 9h4V5H4v4zm5 5h12v-4H9v4zm0 5h12v-4H9v4zM9 5v4h12V5H9z"
+                  />
+                </svg>
+              </button>
             </div>
-              </div>
-            <!-- END CONTENT SECTION  -->
+          </div>
 
-            <!-- FOOTER -->
-            <footer>
-              <div class="container">
-                <div class="sec about-us">
-                  <h2>About Us</h2>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ratione
-                    aspernatur asperiores, sapiente fugiat fugit saepe nobis nam
-                    necessitatibus quae vitae quo amet vero explicabo voluptates maiores
-                    qui animi magnam ullam.
-                  </p>
-                  <ul class="sec smlinks">
-                    <li>
-                      <a href="#" class="facebook"
-                      ><img
-                      src="https://img.icons8.com/color/48/000000/facebook-new.png"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#" class="twitter"
-                      ><img src="https://img.icons8.com/fluency/48/000000/twitter.png"
-                      /></a>
-                    </li>
-                    <li>
-                      <a href="#" class="instagram"
-                      ><img
-                      src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
-                      /></a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="sec quick-links">
-                  <h2>Quick Links</h2>
-                  <ul class="info">
-                    <li>
-                      <span> <i class="phone-img" aria-hidden="true"><img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"/></i></span>
-                      <span>000 Lorem Ipsum<br>
-                      Faraway, LI 1020,<br>LMI</span>
-                    </li>
-                    <li>
-                      <span><i class="mail-img" aria-hidden="true"><img src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"/></i></span>
-                      <p><a href="#">+1 234 567 8900</a><br><a href="#">+1 234 567 8900</a></p>
-                    </li>
-                    <li>
-                      <span><i class="env-img" aria-hidden="true"><img src="https://img.icons8.com/material-rounded/24/000000/mail.png"/></i></span>
-                      <p><a href="#">non.existent@gmail.com</a></p>
-                    </li>
-                  </ul>
+          <div class="recipes-grid" id="recipes-container">
+            <!-- Pan-Seared Steak Recipe -->
+            <article
+              class="recipe-card"
+              data-difficulty="medium"
+              data-time="30"
+              data-cuisine="american"
+              data-recipe="pan-seared-steak"
+            >
+              <div class="recipe-image">
+                <img
+                  src="./img/pan-seared-steak.jpg"
+                  alt="Perfectly cooked pan-seared steak with herbs"
+                  loading="lazy"
+                />
+                <div class="recipe-overlay">
+                  <button
+                    class="favorite-btn"
+                    aria-label="Add to favorites"
+                    title="Add to favorites"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      />
+                    </svg>
+                  </button>
+                  <div class="recipe-badges">
+                    <span class="difficulty-badge medium">Medium</span>
+                    <span class="time-badge">30 min</span>
+                  </div>
                 </div>
               </div>
-            </footer>
-            <!-- END FOOTER -->
+
+              <div class="recipe-content">
+                <header class="recipe-header">
+                  <h3 class="recipe-title">Pan-Seared Steak</h3>
+                  <div class="recipe-rating">
+                    <div
+                      class="stars"
+                      data-rating="5"
+                      aria-label="5 out of 5 stars"
+                    >
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <span class="rating-count">(124 reviews)</span>
+                  </div>
+                </header>
+
+                <p class="recipe-description">
+                  A perfectly seared steak with aromatic herbs, garlic, and
+                  butter for restaurant-quality results at home.
+                </p>
+
+                <div class="recipe-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Serves:</span>
+                    <span>2</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Time:</span>
+                    <span>30 min</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Level:</span>
+                    <span>Medium</span>
+                  </div>
+                </div>
+
+                <div class="recipe-actions">
+                  <button
+                    class="btn btn-primary recipe-btn"
+                    data-recipe="pan-seared-steak"
+                  >
+                    View Recipe
+                  </button>
+                  <button
+                    class="btn btn-secondary save-btn"
+                    aria-label="Save recipe"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Curry-Coconut Shrimp Recipe -->
+            <article
+              class="recipe-card"
+              data-difficulty="easy"
+              data-time="20"
+              data-cuisine="asian"
+              data-recipe="curried-shrimp"
+            >
+              <div class="recipe-image">
+                <img
+                  src="./img/curried-shrimp.jpg"
+                  alt="Aromatic curry-coconut shrimp with spices"
+                  loading="lazy"
+                />
+                <div class="recipe-overlay">
+                  <button
+                    class="favorite-btn"
+                    aria-label="Add to favorites"
+                    title="Add to favorites"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      />
+                    </svg>
+                  </button>
+                  <div class="recipe-badges">
+                    <span class="difficulty-badge easy">Easy</span>
+                    <span class="time-badge">20 min</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipe-content">
+                <header class="recipe-header">
+                  <h3 class="recipe-title">Curry-Coconut Shrimp</h3>
+                  <div class="recipe-rating">
+                    <div
+                      class="stars"
+                      data-rating="5"
+                      aria-label="5 out of 5 stars"
+                    >
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <span class="rating-count">(89 reviews)</span>
+                  </div>
+                </header>
+
+                <p class="recipe-description">
+                  Flavorful shrimp in a creamy coconut curry sauce with aromatic
+                  spices. Quick and delicious!
+                </p>
+
+                <div class="recipe-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Serves:</span>
+                    <span>4</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Time:</span>
+                    <span>20 min</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Level:</span>
+                    <span>Easy</span>
+                  </div>
+                </div>
+
+                <div class="recipe-actions">
+                  <button
+                    class="btn btn-primary recipe-btn"
+                    data-recipe="curried-shrimp"
+                  >
+                    View Recipe
+                  </button>
+                  <button
+                    class="btn btn-secondary save-btn"
+                    aria-label="Save recipe"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Lobster Ravioli Recipe -->
+            <article
+              class="recipe-card"
+              data-difficulty="hard"
+              data-time="45"
+              data-cuisine="italian"
+              data-recipe="lobster-ravioli"
+            >
+              <div class="recipe-image">
+                <img
+                  src="./img/lobster-ravioli.jpg"
+                  alt="Gourmet lobster-filled ravioli pasta"
+                  loading="lazy"
+                />
+                <div class="recipe-overlay">
+                  <button
+                    class="favorite-btn"
+                    aria-label="Add to favorites"
+                    title="Add to favorites"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      />
+                    </svg>
+                  </button>
+                  <div class="recipe-badges">
+                    <span class="difficulty-badge hard">Hard</span>
+                    <span class="time-badge">45 min</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipe-content">
+                <header class="recipe-header">
+                  <h3 class="recipe-title">Lobster-Filled Ravioli</h3>
+                  <div class="recipe-rating">
+                    <div
+                      class="stars"
+                      data-rating="5"
+                      aria-label="5 out of 5 stars"
+                    >
+                      ⭐⭐⭐⭐⭐
+                    </div>
+                    <span class="rating-count">(156 reviews)</span>
+                  </div>
+                </header>
+
+                <p class="recipe-description">
+                  Luxurious homemade ravioli filled with fresh lobster and
+                  ricotta, served in a delicate cream sauce.
+                </p>
+
+                <div class="recipe-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Serves:</span>
+                    <span>4</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Time:</span>
+                    <span>45 min</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Level:</span>
+                    <span>Hard</span>
+                  </div>
+                </div>
+
+                <div class="recipe-actions">
+                  <button
+                    class="btn btn-primary recipe-btn"
+                    data-recipe="lobster-ravioli"
+                  >
+                    View Recipe
+                  </button>
+                  <button
+                    class="btn btn-secondary save-btn"
+                    aria-label="Save recipe"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Pan-Seared Salmon Recipe -->
+            <article
+              class="recipe-card"
+              data-difficulty="easy"
+              data-time="25"
+              data-cuisine="mediterranean"
+              data-recipe="pan-seared-salmon"
+            >
+              <div class="recipe-image">
+                <img
+                  src="./img/pan-seared-salmon.jpg"
+                  alt="Perfectly cooked pan-seared salmon fillet"
+                  loading="lazy"
+                />
+                <div class="recipe-overlay">
+                  <button
+                    class="favorite-btn"
+                    aria-label="Add to favorites"
+                    title="Add to favorites"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      />
+                    </svg>
+                  </button>
+                  <div class="recipe-badges">
+                    <span class="difficulty-badge easy">Easy</span>
+                    <span class="time-badge">25 min</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipe-content">
+                <header class="recipe-header">
+                  <h3 class="recipe-title">Pan-Seared Salmon</h3>
+                  <div class="recipe-rating">
+                    <div
+                      class="stars"
+                      data-rating="4"
+                      aria-label="4 out of 5 stars"
+                    >
+                      ⭐⭐⭐⭐☆
+                    </div>
+                    <span class="rating-count">(203 reviews)</span>
+                  </div>
+                </header>
+
+                <p class="recipe-description">
+                  Crispy-skinned salmon with a perfectly flaky interior, served
+                  with fresh kale and apple salad.
+                </p>
+
+                <div class="recipe-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Serves:</span>
+                    <span>4</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Time:</span>
+                    <span>25 min</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Level:</span>
+                    <span>Easy</span>
+                  </div>
+                </div>
+
+                <div class="recipe-actions">
+                  <button
+                    class="btn btn-primary recipe-btn"
+                    data-recipe="pan-seared-salmon"
+                  >
+                    View Recipe
+                  </button>
+                  <button
+                    class="btn btn-secondary save-btn"
+                    aria-label="Save recipe"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Mushroom Kale Salad Recipe -->
+            <article
+              class="recipe-card"
+              data-difficulty="easy"
+              data-time="15"
+              data-cuisine="american"
+              data-recipe="mushroom-kale-salad"
+            >
+              <div class="recipe-image">
+                <img
+                  src="./img/steakhouse-salad.jpg"
+                  alt="Fresh mushroom kale salad with vegetables"
+                  loading="lazy"
+                />
+                <div class="recipe-overlay">
+                  <button
+                    class="favorite-btn"
+                    aria-label="Add to favorites"
+                    title="Add to favorites"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      width="24"
+                      height="24"
+                    >
+                      <path
+                        d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
+                      />
+                    </svg>
+                  </button>
+                  <div class="recipe-badges">
+                    <span class="difficulty-badge easy">Easy</span>
+                    <span class="time-badge">15 min</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="recipe-content">
+                <header class="recipe-header">
+                  <h3 class="recipe-title">Mushroom Kale Salad</h3>
+                  <div class="recipe-rating">
+                    <div
+                      class="stars"
+                      data-rating="4"
+                      aria-label="4 out of 5 stars"
+                    >
+                      ⭐⭐⭐⭐☆
+                    </div>
+                    <span class="rating-count">(67 reviews)</span>
+                  </div>
+                </header>
+
+                <p class="recipe-description">
+                  A hearty and healthy salad with massaged kale, sautéed
+                  mushrooms, and a tangy horseradish dressing.
+                </p>
+
+                <div class="recipe-meta">
+                  <div class="meta-item">
+                    <span class="meta-label">Serves:</span>
+                    <span>4</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Time:</span>
+                    <span>15 min</span>
+                  </div>
+                  <div class="meta-item">
+                    <span class="meta-label">Level:</span>
+                    <span>Easy</span>
+                  </div>
+                </div>
+
+                <div class="recipe-actions">
+                  <button
+                    class="btn btn-primary recipe-btn"
+                    data-recipe="mushroom-kale-salad"
+                  >
+                    View Recipe
+                  </button>
+                  <button
+                    class="btn btn-secondary save-btn"
+                    aria-label="Save recipe"
+                  >
+                    Save
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- No Results Message -->
+          <div class="no-results" id="no-results" style="display: none">
+            <div class="no-results-content">
+              <div class="no-results-icon">🔍</div>
+              <h3>No recipes found</h3>
+              <p>Try adjusting your search or filter criteria</p>
+              <button class="btn btn-primary" id="clear-filters">
+                Clear All Filters
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Recipe Detail Modal -->
+    <div
+      class="modal"
+      id="recipe-modal"
+      role="dialog"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-overlay" data-close-modal></div>
+      <div class="modal-content">
+        <header class="modal-header">
+          <h2 id="modal-title" class="modal-title">Recipe Details</h2>
+          <button class="modal-close" data-close-modal aria-label="Close modal">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              width="24"
+              height="24"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </header>
+        <div class="modal-body" id="modal-body">
+          <!-- Recipe details will be loaded here dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about-us" aria-labelledby="about-title">
+            <h3 id="about-title">About FlavorCraft</h3>
+            <p>
+              FlavorCraft is your ultimate culinary companion, bringing together
+              passionate cooks from around the world. We believe that great food
+              brings people together and that everyone can learn to cook amazing
+              meals.
+            </p>
+            <div
+              class="social-links"
+              role="group"
+              aria-label="Social media links"
+            >
+              <a
+                href="#"
+                class="social-link facebook"
+                aria-label="Follow us on Facebook"
+              >
+                <img
+                  src="https://img.icons8.com/color/48/000000/facebook-new.png"
+                  alt="Facebook"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="#"
+                class="social-link twitter"
+                aria-label="Follow us on Twitter"
+              >
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/twitter.png"
+                  alt="Twitter"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="#"
+                class="social-link instagram"
+                aria-label="Follow us on Instagram"
+              >
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
+                  alt="Instagram"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section quick-links" aria-labelledby="links-title">
+            <h3 id="links-title">Quick Links</h3>
+            <ul role="menu">
+              <li role="none">
+                <a href="/meals.html" role="menuitem">All Recipes</a>
+              </li>
+              <li role="none">
+                <a href="#categories" role="menuitem">Categories</a>
+              </li>
+              <li role="none">
+                <a href="#meal-planner" role="menuitem">Meal Planner</a>
+              </li>
+              <li role="none">
+                <a href="#nutrition" role="menuitem">Nutrition Guide</a>
+              </li>
+              <li role="none">
+                <a href="#cooking-tips" role="menuitem">Cooking Tips</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="footer-section contact-info"
+            aria-labelledby="contact-title"
+          >
+            <h3 id="contact-title">Get in Touch</h3>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
+                alt="Address"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>123 Culinary Street<br />Flavor Town, FT 12345</span>
+            </div>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
+                alt="Phone"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>
+                <a
+                  href="tel:+1234567890"
+                  aria-label="Call us at +1 234 567 8900"
+                  >+1 (234) 567-8900</a
+                >
+              </span>
+            </div>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/material-rounded/24/000000/mail.png"
+                alt="Email"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>
+                <a
+                  href="mailto:hello@flavorcraft.com"
+                  aria-label="Send us an email"
+                  >hello@flavorcraft.com</a
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 FlavorCraft. All rights reserved. Made with ❤️ for food
+            lovers everywhere.
+          </p>
+          <div class="footer-links">
+            <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href="#terms" aria-label="Terms of Service">Terms of Service</a>
+            <a href="#cookies" aria-label="Cookie Policy">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      ↑
+    </button>
+
+    <!-- Scripts -->
+    <script src="/js/app.js" defer></script>
   </body>
 </html>

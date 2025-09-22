@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- SEO Meta Tags -->
+    <title>Saved Recipes - FlavorCraft | Your Personal Recipe Collection</title>
+    <meta
+      name="description"
+      content="Access your saved recipes on FlavorCraft. View and manage your personal collection of favorite recipes all in one place."
+    />
+    <meta
+      name="keywords"
+      content="saved recipes, favorite recipes, personal recipe collection, FlavorCraft favorites"
+    />
+    <meta name="author" content="FlavorCraft Team" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://flavorcraft.com/saved-recipes.html" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/meal.css" />
+  </head>
+  <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+
+    <!-- Header Navigation -->
+    <header role="banner">
+      <nav id="header" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="FlavorCraft home">
+          <span class="logo-icon">🍽️</span>
+          <span class="logo-text">FlavorCraft</span>
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          id="toggle"
+          class="menu-toggle"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation menu -->
+        <div id="navbar" class="navbar" role="menu">
+          <ul class="nav-links" role="menubar">
+            <li role="none"><a href="/index.html" role="menuitem">Home</a></li>
+            <li role="none">
+              <a href="/meals.html" role="menuitem">Recipes</a>
+            </li>
+            <li role="none"><a href="/about.html" role="menuitem">About</a></li>
+            <li role="none">
+              <a href="/contact.html" role="menuitem">Contact</a>
+            </li>
+            <li role="none">
+              <a href="/saved-recipes.html" role="menuitem" aria-current="page"
+                >Saved Recipes</a
+              >
+            </li>
+            <li role="none">
+              <a href="/login.html" role="menuitem" class="login-btn">Log In</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+      <!-- Page Header -->
+      <section class="page-hero" aria-labelledby="page-title">
+        <div class="container">
+          <div class="page-header">
+            <h1 id="page-title">Your Saved Recipes</h1>
+            <p class="page-subtitle">
+              All your favorite recipes in one convenient place
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Saved Recipes Content -->
+      <section
+        class="saved-recipes-section"
+        aria-labelledby="saved-recipes-title"
+      >
+        <div class="container">
+          <!-- Search and Filter for Saved Recipes -->
+          <div class="saved-controls">
+            <div class="search-container">
+              <input
+                type="search"
+                id="saved-recipe-search"
+                class="search-input"
+                placeholder="Search your saved recipes..."
+                aria-label="Search saved recipes"
+              />
+              <button class="search-btn" aria-label="Search saved recipes">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  width="20"
+                  height="20"
+                >
+                  <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="saved-actions">
+              <button class="btn btn-secondary" id="clear-all-saved">
+                Clear All
+              </button>
+              <button class="btn btn-primary" id="export-recipes">
+                Export Recipes
+              </button>
+            </div>
+          </div>
+
+          <!-- Saved Recipes Grid -->
+          <div class="saved-recipes-grid" id="saved-recipes-container">
+            <!-- This will be populated by JavaScript -->
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-saved-recipes" id="empty-saved-state">
+            <div class="empty-state-content">
+              <div class="empty-state-icon">📚</div>
+              <h2>No Saved Recipes Yet</h2>
+              <p>
+                Start building your personal recipe collection by saving recipes
+                you love!
+              </p>
+              <div class="empty-state-actions">
+                <a href="/meals.html" class="btn btn-primary">Browse Recipes</a>
+                <a href="/about.html" class="btn btn-secondary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe Collections -->
+          <div
+            class="recipe-collections"
+            id="recipe-collections"
+            style="display: none"
+          >
+            <h2>Your Recipe Collections</h2>
+            <div class="collections-grid">
+              <div class="collection-card">
+                <div class="collection-header">
+                  <h3>Quick Weeknight Dinners</h3>
+                  <span class="recipe-count">0 recipes</span>
+                </div>
+                <div class="collection-preview">
+                  <!-- Preview images will be added by JavaScript -->
+                </div>
+              </div>
+
+              <div class="collection-card">
+                <div class="collection-header">
+                  <h3>Weekend Specials</h3>
+                  <span class="recipe-count">0 recipes</span>
+                </div>
+                <div class="collection-preview">
+                  <!-- Preview images will be added by JavaScript -->
+                </div>
+              </div>
+
+              <div class="collection-card">
+                <div class="collection-header">
+                  <h3>Healthy Options</h3>
+                  <span class="recipe-count">0 recipes</span>
+                </div>
+                <div class="collection-preview">
+                  <!-- Preview images will be added by JavaScript -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recipe Stats -->
+          <div class="recipe-stats" id="recipe-stats" style="display: none">
+            <h2>Your Cooking Journey</h2>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-number" id="total-saved">0</div>
+                <div class="stat-label">Recipes Saved</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" id="cuisines-explored">0</div>
+                <div class="stat-label">Cuisines Explored</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" id="avg-difficulty">N/A</div>
+                <div class="stat-label">Avg Difficulty</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number" id="total-cook-time">0</div>
+                <div class="stat-label">Total Cook Time</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about-us" aria-labelledby="about-title">
+            <h3 id="about-title">About FlavorCraft</h3>
+            <p>
+              FlavorCraft is your ultimate culinary companion, bringing together
+              passionate cooks from around the world. We believe that great food
+              brings people together and that everyone can learn to cook amazing
+              meals.
+            </p>
+            <div
+              class="social-links"
+              role="group"
+              aria-label="Social media links"
+            >
+              <a
+                href="#"
+                class="social-link facebook"
+                aria-label="Follow us on Facebook"
+              >
+                <img
+                  src="https://img.icons8.com/color/48/000000/facebook-new.png"
+                  alt="Facebook"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="#"
+                class="social-link twitter"
+                aria-label="Follow us on Twitter"
+              >
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/twitter.png"
+                  alt="Twitter"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="#"
+                class="social-link instagram"
+                aria-label="Follow us on Instagram"
+              >
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
+                  alt="Instagram"
+                  width="24"
+                  height="24"
+                />
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-section quick-links" aria-labelledby="links-title">
+            <h3 id="links-title">Quick Links</h3>
+            <ul role="menu">
+              <li role="none">
+                <a href="/meals.html" role="menuitem">All Recipes</a>
+              </li>
+              <li role="none">
+                <a href="/about.html" role="menuitem">About Us</a>
+              </li>
+              <li role="none">
+                <a href="/contact.html" role="menuitem">Contact</a>
+              </li>
+              <li role="none">
+                <a href="/saved-recipes.html" role="menuitem">Saved Recipes</a>
+              </li>
+              <li role="none">
+                <a href="/login.html" role="menuitem">Login</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="footer-section contact-info"
+            aria-labelledby="contact-title"
+          >
+            <h3 id="contact-title">Get in Touch</h3>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
+                alt="Address"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>123 Culinary Street<br />Flavor Town, FT 12345</span>
+            </div>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
+                alt="Phone"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>
+                <a
+                  href="tel:+1234567890"
+                  aria-label="Call us at +1 234 567 8900"
+                  >+1 (234) 567-8900</a
+                >
+              </span>
+            </div>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/material-rounded/24/000000/mail.png"
+                alt="Email"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>
+                <a
+                  href="mailto:hello@flavorcraft.com"
+                  aria-label="Send us an email"
+                  >hello@flavorcraft.com</a
+                >
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 FlavorCraft. All rights reserved. Made with ❤️ for food
+            lovers everywhere.
+          </p>
+          <div class="footer-links">
+            <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href="#terms" aria-label="Terms of Service">Terms of Service</a>
+            <a href="#cookies" aria-label="Cookie Policy">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      ↑
+    </button>
+
+    <!-- Scripts -->
+    <script src="/js/app.js" defer></script>
+  </body>
+</html>
