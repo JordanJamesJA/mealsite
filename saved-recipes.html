@@ -1,372 +1,457 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- SEO Meta Tags -->
-    <title>Saved Recipes - FlavorCraft | Your Personal Recipe Collection</title>
-    <meta
-      name="description"
-      content="Access your saved recipes on FlavorCraft. View and manage your personal collection of favorite recipes all in one place."
-    />
+    <meta name="description" content="Your Saved Recipes - FlavorCraft" />
     <meta
       name="keywords"
-      content="saved recipes, favorite recipes, personal recipe collection, FlavorCraft favorites"
+      content="FlavorCraft, Saved Recipes, Favorites, Bookmarks"
     />
-    <meta name="author" content="FlavorCraft Team" />
-    <meta name="robots" content="noindex, nofollow" />
-    <link rel="canonical" href="https://flavorcraft.com/saved-recipes.html" />
-
-    <!-- Stylesheets -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved Recipes - FlavorCraft</title>
     <link rel="stylesheet" href="/css/meal.css" />
+    <link rel="stylesheet" href="/css/pages.css" />
   </head>
   <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link" aria-label="Skip to main content"
-      >Skip to main content</a
-    >
+    <!-- NAVIGATION -->
+    <nav id="header">
+      <a href="/index.html" class="logo">FlavorCraft</a>
+      <div id="toggle"></div>
+      <div id="navbar">
+        <ul class="nav-links">
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/meals.html">RECIPES</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+          <li><a href="/saved-recipes.html">SAVED</a></li>
+          <li><a href="/login.html">LOGIN</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <!-- Header Navigation -->
-    <header role="banner">
-      <nav id="header" role="navigation" aria-label="Main navigation">
-        <a href="index.html" class="logo" aria-label="FlavorCraft home">
-          <span class="logo-icon">🍽️</span>
-          <span class="logo-text">FlavorCraft</span>
-        </a>
+    <script src="/js/app.js"></script>
 
-        <!-- Mobile menu toggle -->
-        <button
-          id="toggle"
-          class="menu-toggle"
-          aria-label="Toggle mobile menu"
-          aria-expanded="false"
-          aria-controls="navbar"
+    <!-- HERO SECTION -->
+    <section class="page-hero">
+      <div class="hero-content">
+        <h1>Your Saved Recipes</h1>
+        <p>Your personal collection of favorite recipes</p>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="page-content">
+      <div class="container">
+        <!-- User Info Section -->
+        <section
+          class="user-info-section"
+          id="userInfoSection"
+          style="display: none"
         >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
-
-        <!-- Navigation menu -->
-        <div id="navbar" class="navbar" role="menu">
-          <ul class="nav-links" role="menubar">
-            <li role="none"><a href="/index.html" role="menuitem">Home</a></li>
-            <li role="none">
-              <a href="/meals.html" role="menuitem">Recipes</a>
-            </li>
-            <li role="none"><a href="/about.html" role="menuitem">About</a></li>
-            <li role="none">
-              <a href="/contact.html" role="menuitem">Contact</a>
-            </li>
-            <li role="none">
-              <a href="/saved-recipes.html" role="menuitem" aria-current="page"
-                >Saved Recipes</a
-              >
-            </li>
-            <li role="none">
-              <a href="/login.html" role="menuitem" class="login-btn">Log In</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-      <!-- Page Header -->
-      <section class="page-hero" aria-labelledby="page-title">
-        <div class="container">
-          <div class="page-header">
-            <h1 id="page-title">Your Saved Recipes</h1>
-            <p class="page-subtitle">
-              All your favorite recipes in one convenient place
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Saved Recipes Content -->
-      <section
-        class="saved-recipes-section"
-        aria-labelledby="saved-recipes-title"
-      >
-        <div class="container">
-          <!-- Search and Filter for Saved Recipes -->
-          <div class="saved-controls">
-            <div class="search-container">
-              <input
-                type="search"
-                id="saved-recipe-search"
-                class="search-input"
-                placeholder="Search your saved recipes..."
-                aria-label="Search saved recipes"
-              />
-              <button class="search-btn" aria-label="Search saved recipes">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  width="20"
-                  height="20"
-                >
-                  <path
-                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"
-                  />
-                </svg>
-              </button>
+          <div class="user-card">
+            <div class="user-avatar">👨‍🍳</div>
+            <div class="user-details">
+              <h2 id="userName">Welcome back!</h2>
+              <p id="userEmail"></p>
+              <p class="recipe-count">
+                You have <span id="savedCount">0</span> saved recipes
+              </p>
             </div>
-
-            <div class="saved-actions">
-              <button class="btn btn-secondary" id="clear-all-saved">
+            <div class="user-actions">
+              <button class="btn-secondary" onclick="clearAllSavedRecipes()">
                 Clear All
               </button>
-              <button class="btn btn-primary" id="export-recipes">
-                Export Recipes
-              </button>
+              <button class="btn-secondary" onclick="logout()">Logout</button>
             </div>
           </div>
+        </section>
 
-          <!-- Saved Recipes Grid -->
-          <div class="saved-recipes-grid" id="saved-recipes-container">
-            <!-- This will be populated by JavaScript -->
+        <!-- Search Section -->
+        <section
+          class="search-section"
+          id="savedSearchSection"
+          style="display: none"
+        >
+          <div class="search-bar">
+            <input
+              type="text"
+              id="savedSearchInput"
+              placeholder="Search your saved recipes..."
+            />
+            <button id="savedSearchBtn" type="button">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+              </svg>
+            </button>
+          </div>
+        </section>
+
+        <!-- Saved Recipes Grid -->
+        <section class="recipes-container">
+          <div id="savedRecipesGrid" class="recipes-grid">
+            <!-- Saved recipes will be inserted here -->
           </div>
 
           <!-- Empty State -->
-          <div class="empty-saved-recipes" id="empty-saved-state">
-            <div class="empty-state-content">
-              <div class="empty-state-icon">📚</div>
-              <h2>No Saved Recipes Yet</h2>
-              <p>
-                Start building your personal recipe collection by saving recipes
-                you love!
-              </p>
-              <div class="empty-state-actions">
-                <a href="/meals.html" class="btn btn-primary">Browse Recipes</a>
-                <a href="/about.html" class="btn btn-secondary">Learn More</a>
-              </div>
-            </div>
+          <div id="emptyState" class="empty-state">
+            <div class="empty-icon">🍽️</div>
+            <h2>No Saved Recipes Yet</h2>
+            <p>
+              Start building your personal cookbook by saving recipes you love!
+            </p>
+            <a href="/meals.html" class="btn-primary">Explore Recipes</a>
           </div>
 
-          <!-- Recipe Collections -->
-          <div
-            class="recipe-collections"
-            id="recipe-collections"
-            style="display: none"
-          >
-            <h2>Your Recipe Collections</h2>
-            <div class="collections-grid">
-              <div class="collection-card">
-                <div class="collection-header">
-                  <h3>Quick Weeknight Dinners</h3>
-                  <span class="recipe-count">0 recipes</span>
-                </div>
-                <div class="collection-preview">
-                  <!-- Preview images will be added by JavaScript -->
-                </div>
-              </div>
+          <!-- No Search Results -->
+          <div id="noSearchResults" class="no-results" style="display: none">
+            <h3>No matching recipes found</h3>
+            <p>Try adjusting your search terms.</p>
+          </div>
+        </section>
 
-              <div class="collection-card">
-                <div class="collection-header">
-                  <h3>Weekend Specials</h3>
-                  <span class="recipe-count">0 recipes</span>
-                </div>
-                <div class="collection-preview">
-                  <!-- Preview images will be added by JavaScript -->
-                </div>
-              </div>
-
-              <div class="collection-card">
-                <div class="collection-header">
-                  <h3>Healthy Options</h3>
-                  <span class="recipe-count">0 recipes</span>
-                </div>
-                <div class="collection-preview">
-                  <!-- Preview images will be added by JavaScript -->
-                </div>
-              </div>
+        <!-- Recipe Stats Section -->
+        <section class="recipe-stats" id="recipeStats" style="display: none">
+          <h2>Your Recipe Stats</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number" id="totalSaved">0</div>
+              <div class="stat-label">Total Saved</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="seafoodCount">0</div>
+              <div class="stat-label">Seafood Recipes</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="meatCount">0</div>
+              <div class="stat-label">Meat Recipes</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number" id="saladCount">0</div>
+              <div class="stat-label">Salad Recipes</div>
             </div>
           </div>
-
-          <!-- Recipe Stats -->
-          <div class="recipe-stats" id="recipe-stats" style="display: none">
-            <h2>Your Cooking Journey</h2>
-            <div class="stats-grid">
-              <div class="stat-card">
-                <div class="stat-number" id="total-saved">0</div>
-                <div class="stat-label">Recipes Saved</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" id="cuisines-explored">0</div>
-                <div class="stat-label">Cuisines Explored</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" id="avg-difficulty">N/A</div>
-                <div class="stat-label">Avg Difficulty</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-number" id="total-cook-time">0</div>
-                <div class="stat-label">Total Cook Time</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
-    <!-- Footer -->
-    <footer role="contentinfo" aria-label="Site footer">
+    <!-- Recipe Modal (reused from meals.html) -->
+    <div id="recipeModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeRecipeModal()">&times;</span>
+        <div id="modalBody">
+          <!-- Recipe details will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-section about-us" aria-labelledby="about-title">
-            <h3 id="about-title">About FlavorCraft</h3>
-            <p>
-              FlavorCraft is your ultimate culinary companion, bringing together
-              passionate cooks from around the world. We believe that great food
-              brings people together and that everyone can learn to cook amazing
-              meals.
-            </p>
-            <div
-              class="social-links"
-              role="group"
-              aria-label="Social media links"
-            >
-              <a
-                href="#"
-                class="social-link facebook"
-                aria-label="Follow us on Facebook"
-              >
+        <div class="sec about-us">
+          <h2>About FlavorCraft</h2>
+          <p>
+            FlavorCraft is your ultimate destination for discovering, saving,
+            and sharing amazing recipes. We believe that great cooking starts
+            with great recipes, and every meal should be a delightful
+            experience.
+          </p>
+          <ul class="sec smlinks">
+            <li>
+              <a href="#" class="facebook">
                 <img
                   src="https://img.icons8.com/color/48/000000/facebook-new.png"
                   alt="Facebook"
-                  width="24"
-                  height="24"
                 />
               </a>
-              <a
-                href="#"
-                class="social-link twitter"
-                aria-label="Follow us on Twitter"
-              >
+            </li>
+            <li>
+              <a href="#" class="twitter">
                 <img
                   src="https://img.icons8.com/fluency/48/000000/twitter.png"
                   alt="Twitter"
-                  width="24"
-                  height="24"
                 />
               </a>
-              <a
-                href="#"
-                class="social-link instagram"
-                aria-label="Follow us on Instagram"
-              >
+            </li>
+            <li>
+              <a href="#" class="instagram">
                 <img
                   src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
                   alt="Instagram"
-                  width="24"
-                  height="24"
                 />
               </a>
-            </div>
-          </div>
-
-          <div class="footer-section quick-links" aria-labelledby="links-title">
-            <h3 id="links-title">Quick Links</h3>
-            <ul role="menu">
-              <li role="none">
-                <a href="/meals.html" role="menuitem">All Recipes</a>
-              </li>
-              <li role="none">
-                <a href="/about.html" role="menuitem">About Us</a>
-              </li>
-              <li role="none">
-                <a href="/contact.html" role="menuitem">Contact</a>
-              </li>
-              <li role="none">
-                <a href="/saved-recipes.html" role="menuitem">Saved Recipes</a>
-              </li>
-              <li role="none">
-                <a href="/login.html" role="menuitem">Login</a>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="footer-section contact-info"
-            aria-labelledby="contact-title"
-          >
-            <h3 id="contact-title">Get in Touch</h3>
-            <div class="contact-item">
-              <img
-                src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
-                alt="Address"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              />
-              <span>123 Culinary Street<br />Flavor Town, FT 12345</span>
-            </div>
-            <div class="contact-item">
-              <img
-                src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
-                alt="Phone"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              />
-              <span>
-                <a
-                  href="tel:+1234567890"
-                  aria-label="Call us at +1 234 567 8900"
-                  >+1 (234) 567-8900</a
-                >
-              </span>
-            </div>
-            <div class="contact-item">
-              <img
-                src="https://img.icons8.com/material-rounded/24/000000/mail.png"
-                alt="Email"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              />
-              <span>
-                <a
-                  href="mailto:hello@flavorcraft.com"
-                  aria-label="Send us an email"
-                  >hello@flavorcraft.com</a
-                >
-              </span>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 FlavorCraft. All rights reserved. Made with ❤️ for food
-            lovers everywhere.
-          </p>
-          <div class="footer-links">
-            <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
-            <a href="#terms" aria-label="Terms of Service">Terms of Service</a>
-            <a href="#cookies" aria-label="Cookie Policy">Cookie Policy</a>
-          </div>
+        <div class="sec quick-links">
+          <h2>Quick Links</h2>
+          <ul class="info">
+            <li>
+              <span
+                ><i class="phone-img" aria-hidden="true"
+                  ><img
+                    src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
+                    alt="Location" /></i
+              ></span>
+              <span>123 Culinary Street<br />Food City, FC 12345<br />USA</span>
+            </li>
+            <li>
+              <span
+                ><i class="mail-img" aria-hidden="true"
+                  ><img
+                    src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
+                    alt="Phone" /></i
+              ></span>
+              <p>
+                <a href="tel:+1234567890">+1 (234) 567-8900</a><br /><a
+                  href="tel:+1234567891"
+                  >+1 (234) 567-8901</a
+                >
+              </p>
+            </li>
+            <li>
+              <span
+                ><i class="env-img" aria-hidden="true"
+                  ><img
+                    src="https://img.icons8.com/material-rounded/24/000000/mail.png"
+                    alt="Email" /></i
+              ></span>
+              <p>
+                <a href="mailto:hello@flavorcraft.com">hello@flavorcraft.com</a>
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
 
-    <!-- Back to top button -->
-    <button
-      id="back-to-top"
-      class="back-to-top"
-      aria-label="Back to top"
-      title="Back to top"
-    >
-      ↑
-    </button>
+    <script>
+      // Global variables specific to saved recipes page
+      let currentSavedFilter = "all";
 
-    <!-- Scripts -->
-    <script src="/js/app.js" defer></script>
+      // Initialize saved recipes page
+      document.addEventListener("DOMContentLoaded", function () {
+        loadSavedRecipes();
+        initializeSavedSearch();
+        updateUserInfo();
+      });
+
+      function loadSavedRecipes() {
+        const savedRecipeIds = getSavedRecipes();
+        const savedRecipesGrid = document.getElementById("savedRecipesGrid");
+        const emptyState = document.getElementById("emptyState");
+        const userInfoSection = document.getElementById("userInfoSection");
+        const savedSearchSection =
+          document.getElementById("savedSearchSection");
+        const recipeStats = document.getElementById("recipeStats");
+
+        if (savedRecipeIds.length === 0) {
+          // Show empty state
+          emptyState.style.display = "block";
+          savedRecipesGrid.style.display = "none";
+          userInfoSection.style.display = "none";
+          savedSearchSection.style.display = "none";
+          recipeStats.style.display = "none";
+          return;
+        }
+
+        // Hide empty state and show content
+        emptyState.style.display = "none";
+        savedRecipesGrid.style.display = "grid";
+        userInfoSection.style.display = "block";
+        savedSearchSection.style.display = "block";
+        recipeStats.style.display = "block";
+
+        // Generate recipe cards
+        savedRecipesGrid.innerHTML = "";
+        savedRecipeIds.forEach((recipeId) => {
+          if (recipes[recipeId]) {
+            const recipe = recipes[recipeId];
+            const recipeCard = createSavedRecipeCard(recipeId, recipe);
+            savedRecipesGrid.appendChild(recipeCard);
+          }
+        });
+
+        // Update stats
+        updateRecipeStats(savedRecipeIds);
+      }
+
+      function createSavedRecipeCard(recipeId, recipe) {
+        const card = document.createElement("div");
+        card.className = "recipe-card";
+        card.setAttribute("data-name", recipe.name.toLowerCase());
+        card.setAttribute("data-category", getCategoryFromId(recipeId));
+
+        card.innerHTML = `
+                <div class="recipe-image">
+                    <img src="${recipe.image}" alt="${recipe.name}">
+                    <div class="recipe-overlay">
+                        <button class="btn-view" onclick="openRecipeModal('${recipeId}')">View Recipe</button>
+                    </div>
+                </div>
+                <div class="recipe-info">
+                    <h3>${recipe.name}</h3>
+                    <p class="recipe-description">${recipe.description}</p>
+                    <div class="recipe-meta">
+                        <span class="cook-time">${recipe.cookTime}</span>
+                        <span class="difficulty">${recipe.difficulty}</span>
+                    </div>
+                    <div class="recipe-actions">
+                        <button class="btn-save saved" onclick="removeFromSaved('${recipeId}')">Remove from Saved</button>
+                    </div>
+                </div>
+            `;
+
+        return card;
+      }
+
+      function getCategoryFromId(recipeId) {
+        const categoryMap = {
+          steak: "meat",
+          shrimp: "seafood",
+          ravioli: "seafood",
+          salmon: "seafood",
+          salad: "salad",
+        };
+        return categoryMap[recipeId] || "other";
+      }
+
+      function removeFromSaved(recipeId) {
+        let savedRecipes = getSavedRecipes();
+        savedRecipes = savedRecipes.filter((id) => id !== recipeId);
+        localStorage.setItem(
+          "flavorcraft_saved_recipes",
+          JSON.stringify(savedRecipes)
+        );
+
+        showNotification(
+          `${recipes[recipeId].name} removed from saved recipes!`,
+          "success"
+        );
+
+        // Reload the page content
+        loadSavedRecipes();
+        updateUserInfo();
+      }
+
+      function clearAllSavedRecipes() {
+        if (
+          confirm(
+            "Are you sure you want to remove all saved recipes? This action cannot be undone."
+          )
+        ) {
+          localStorage.removeItem("flavorcraft_saved_recipes");
+          showNotification("All saved recipes have been cleared!", "success");
+          loadSavedRecipes();
+          updateUserInfo();
+        }
+      }
+
+      function updateUserInfo() {
+        const user = JSON.parse(
+          localStorage.getItem("flavorcraft_user") || "{}"
+        );
+        const savedCount = getSavedRecipes().length;
+
+        if (user.name) {
+          document.getElementById(
+            "userName"
+          ).textContent = `Hello, ${user.name}!`;
+          document.getElementById("userEmail").textContent = user.email || "";
+        }
+
+        document.getElementById("savedCount").textContent = savedCount;
+      }
+
+      function updateRecipeStats(savedRecipeIds) {
+        const stats = {
+          total: savedRecipeIds.length,
+          seafood: 0,
+          meat: 0,
+          salad: 0,
+        };
+
+        savedRecipeIds.forEach((recipeId) => {
+          const category = getCategoryFromId(recipeId);
+          if (stats[category] !== undefined) {
+            stats[category]++;
+          }
+        });
+
+        document.getElementById("totalSaved").textContent = stats.total;
+        document.getElementById("seafoodCount").textContent = stats.seafood;
+        document.getElementById("meatCount").textContent = stats.meat;
+        document.getElementById("saladCount").textContent = stats.salad;
+      }
+
+      function initializeSavedSearch() {
+        const searchInput = document.getElementById("savedSearchInput");
+        const searchBtn = document.getElementById("savedSearchBtn");
+
+        if (searchInput) {
+          searchInput.addEventListener("input", performSavedSearch);
+
+          if (searchBtn) {
+            searchBtn.addEventListener("click", performSavedSearch);
+          }
+
+          searchInput.addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+              performSavedSearch();
+            }
+          });
+        }
+      }
+
+      function performSavedSearch() {
+        const searchInput = document.getElementById("savedSearchInput");
+        const savedRecipesGrid = document.getElementById("savedRecipesGrid");
+        const noResults = document.getElementById("noSearchResults");
+
+        if (!searchInput || !savedRecipesGrid) return;
+
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const recipeCards = savedRecipesGrid.querySelectorAll(".recipe-card");
+        let visibleCount = 0;
+
+        recipeCards.forEach((card) => {
+          const name = card.dataset.name;
+
+          if (searchTerm === "" || name.includes(searchTerm)) {
+            card.style.display = "block";
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        // Show/hide no results message
+        if (noResults) {
+          if (visibleCount === 0 && searchTerm !== "") {
+            noResults.style.display = "block";
+          } else {
+            noResults.style.display = "none";
+          }
+        }
+      }
+
+      function logout() {
+        if (confirm("Are you sure you want to logout?")) {
+          localStorage.removeItem("flavorcraft_user");
+          showNotification("You have been logged out successfully!", "success");
+          setTimeout(() => {
+            window.location.href = "/login.html";
+          }, 1500);
+        }
+      }
+    </script>
   </body>
 </html>

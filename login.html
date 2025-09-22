@@ -1,308 +1,962 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Essential Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <!-- SEO Meta Tags -->
     <title>Login - FlavorCraft | Access Your Account</title>
-    <meta name="description" content="Log in to your FlavorCraft account to access saved recipes, personalized recommendations, and exclusive cooking features.">
-    <meta name="keywords" content="FlavorCraft login, recipe account, cooking profile, saved recipes">
-    <meta name="author" content="FlavorCraft Team">
-    <meta name="robots" content="noindex, nofollow">
-    <link rel="canonical" href="https://flavorcraft.com/login.html">
-    
+    <meta
+      name="description"
+      content="Log in to your FlavorCraft account to access saved recipes, personalized recommendations, and exclusive cooking features."
+    />
+    <meta
+      name="keywords"
+      content="FlavorCraft login, recipe account, cooking profile, saved recipes"
+    />
+    <meta name="author" content="FlavorCraft Team" />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="canonical" href="https://flavorcraft.com/login.html" />
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/meal.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/css/meal.css" />
+  </head>
+  <body>
     <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link" aria-label="Skip to main content">Skip to main content</a>
-    
+    <a href="#main-content" class="skip-link" aria-label="Skip to main content"
+      >Skip to main content</a
+    >
+
     <!-- Header Navigation -->
     <header role="banner">
-        <nav id="header" role="navigation" aria-label="Main navigation">
-            <a href="index.html" class="logo" aria-label="FlavorCraft home">
-                <span class="logo-icon">🍽️</span>
-                <span class="logo-text">FlavorCraft</span>
-            </a>
-            
-            <!-- Mobile menu toggle -->
-            <button id="toggle" 
-                    class="menu-toggle" 
-                    aria-label="Toggle mobile menu" 
-                    aria-expanded="false" 
-                    aria-controls="navbar">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            
-            <!-- Navigation menu -->
-            <div id="navbar" class="navbar" role="menu">
-                <ul class="nav-links" role="menubar">
-                    <li role="none"><a href="/index.html" role="menuitem">Home</a></li>
-                    <li role="none"><a href="/meals.html" role="menuitem">Recipes</a></li>
-                    <li role="none"><a href="/about.html" role="menuitem">About</a></li>
-                    <li role="none"><a href="/contact.html" role="menuitem">Contact</a></li>
-                    <li role="none"><a href="/saved-recipes.html" role="menuitem">Saved Recipes</a></li>
-                    <li role="none"><a href="/login.html" role="menuitem" class="login-btn" aria-current="page">Log In</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav id="header" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="FlavorCraft home">
+          <span class="logo-icon">🍽️</span>
+          <span class="logo-text">FlavorCraft</span>
+        </a>
+
+        <!-- Mobile menu toggle -->
+        <button
+          id="toggle"
+          class="menu-toggle"
+          aria-label="Toggle mobile menu"
+          aria-expanded="false"
+          aria-controls="navbar"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+
+        <!-- Navigation menu -->
+        <div id="navbar" class="navbar" role="menu">
+          <ul class="nav-links" role="menubar">
+            <li role="none"><a href="/index.html" role="menuitem">Home</a></li>
+            <li role="none">
+              <a href="/meals.html" role="menuitem">Recipes</a>
+            </li>
+            <li role="none"><a href="/about.html" role="menuitem">About</a></li>
+            <li role="none">
+              <a href="/contact.html" role="menuitem">Contact</a>
+            </li>
+            <li role="none">
+              <a href="/saved-recipes.html" role="menuitem">Saved Recipes</a>
+            </li>
+            <li role="none">
+              <a
+                href="/login.html"
+                role="menuitem"
+                class="login-btn"
+                aria-current="page"
+                >Log In</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <!-- Main Content -->
     <main id="main-content" role="main">
-        <!-- Login Section -->
-        <section class="auth-section">
-            <div class="container">
-                <div class="auth-container">
-                    <div class="auth-form-container">
-                        <div class="auth-header">
-                            <h1>Welcome Back</h1>
-                            <p>Sign in to access your saved recipes and personalized features</p>
-                        </div>
-                        
-                        <form class="auth-form" id="login-form">
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" id="password" name="password" required>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="remember" name="remember">
-                                    <span class="checkmark"></span>
-                                    Remember me
-                                </label>
-                                <a href="#" class="forgot-password">Forgot password?</a>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary auth-btn">Sign In</button>
-                        </form>
-                        
-                        <div class="auth-divider">
-                            <span>or</span>
-                        </div>
-                        
-                        <div class="social-auth">
-                            <button class="btn btn-social google-btn">
-                                <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google" width="20" height="20">
-                                Continue with Google
-                            </button>
-                            <button class="btn btn-social facebook-btn">
-                                <img src="https://img.icons8.com/color/24/000000/facebook-new.png" alt="Facebook" width="20" height="20">
-                                Continue with Facebook
-                            </button>
-                        </div>
-                        
-                        <div class="auth-footer">
-                            <p>Don't have an account? <a href="#" id="show-signup">Sign up</a></p>
-                        </div>
-                    </div>
-                    
-                    <!-- Sign Up Form (Hidden by default) -->
-                    <div class="auth-form-container signup-form" id="signup-container" style="display: none;">
-                        <div class="auth-header">
-                            <h1>Join FlavorCraft</h1>
-                            <p>Create an account to save recipes and join our cooking community</p>
-                        </div>
-                        
-                        <form class="auth-form" id="signup-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="first-name">First Name</label>
-                                    <input type="text" id="first-name" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="last-name">Last Name</label>
-                                    <input type="text" id="last-name" name="lastName" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="signup-email">Email Address</label>
-                                <input type="email" id="signup-email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="signup-password">Password</label>
-                                <input type="password" id="signup-password" name="password" required>
-                                <small>Password must be at least 8 characters long</small>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="confirm-password">Confirm Password</label>
-                                <input type="password" id="confirm-password" name="confirmPassword" required>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="terms" name="terms" required>
-                                    <span class="checkmark"></span>
-                                    I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
-                                </label>
-                            </div>
-                            
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="newsletter-signup" name="newsletter">
-                                    <span class="checkmark"></span>
-                                    Subscribe to our newsletter for recipe updates
-                                </label>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary auth-btn">Create Account</button>
-                        </form>
-                        
-                        <div class="auth-divider">
-                            <span>or</span>
-                        </div>
-                        
-                        <div class="social-auth">
-                            <button class="btn btn-social google-btn">
-                                <img src="https://img.icons8.com/color/24/000000/google-logo.png" alt="Google" width="20" height="20">
-                                Sign up with Google
-                            </button>
-                            <button class="btn btn-social facebook-btn">
-                                <img src="https://img.icons8.com/color/24/000000/facebook-new.png" alt="Facebook" width="20" height="20">
-                                Sign up with Facebook
-                            </button>
-                        </div>
-                        
-                        <div class="auth-footer">
-                            <p>Already have an account? <a href="#" id="show-login">Sign in</a></p>
-                        </div>
-                    </div>
-                    
-                    <!-- Benefits Section -->
-                    <div class="auth-benefits">
-                        <h2>Why Create an Account?</h2>
-                        <div class="benefits-list">
-                            <div class="benefit-item">
-                                <div class="benefit-icon">💾</div>
-                                <div class="benefit-content">
-                                    <h3>Save Your Favorites</h3>
-                                    <p>Keep track of recipes you love and want to cook again</p>
-                                </div>
-                            </div>
-                            
-                            <div class="benefit-item">
-                                <div class="benefit-icon">📝</div>
-                                <div class="benefit-content">
-                                    <h3>Personal Recipe Notes</h3>
-                                    <p>Add your own notes and modifications to recipes</p>
-                                </div>
-                            </div>
-                            
-                            <div class="benefit-item">
-                                <div class="benefit-icon">🎯</div>
-                                <div class="benefit-content">
-                                    <h3>Personalized Recommendations</h3>
-                                    <p>Get recipe suggestions based on your preferences</p>
-                                </div>
-                            </div>
-                            
-                            <div class="benefit-item">
-                                <div class="benefit-icon">📱</div>
-                                <div class="benefit-content">
-                                    <h3>Sync Across Devices</h3>
-                                    <p>Access your saved recipes from any device</p>
-                                </div>
-                            </div>
-                            
-                            <div class="benefit-item">
-                                <div class="benefit-icon">👥</div>
-                                <div class="benefit-content">
-                                    <h3>Join the Community</h3>
-                                    <p>Share recipes and connect with fellow food lovers</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Login Section -->
+      <section class="auth-section">
+        <div class="container">
+          <div class="auth-container">
+            <div class="auth-form-container">
+              <div class="auth-header">
+                <h1>Welcome Back</h1>
+                <p>
+                  Sign in to access your saved recipes and personalized features
+                </p>
+              </div>
+
+              <form class="auth-form" id="login-form">
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input type="email" id="email" name="email" required />
                 </div>
+
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    required
+                  />
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="remember" name="remember" />
+                    <span class="checkmark"></span>
+                    Remember me
+                  </label>
+                  <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-btn">
+                  Sign In
+                </button>
+              </form>
+
+              <div class="auth-divider">
+                <span>or</span>
+              </div>
+
+              <div class="social-auth">
+                <button class="btn btn-social google-btn">
+                  <img
+                    src="https://img.icons8.com/color/24/000000/google-logo.png"
+                    alt="Google"
+                    width="20"
+                    height="20"
+                  />
+                  Continue with Google
+                </button>
+                <button class="btn btn-social facebook-btn">
+                  <img
+                    src="https://img.icons8.com/color/24/000000/facebook-new.png"
+                    alt="Facebook"
+                    width="20"
+                    height="20"
+                  />
+                  Continue with Facebook
+                </button>
+              </div>
+
+              <div class="auth-footer">
+                <p>
+                  Don't have an account?
+                  <a href="#" id="show-signup">Sign up</a>
+                </p>
+              </div>
             </div>
-        </section>
+
+            <!-- Sign Up Form (Hidden by default) -->
+            <div
+              class="auth-form-container signup-form"
+              id="signup-container"
+              style="display: none"
+            >
+              <div class="auth-header">
+                <h1>Join FlavorCraft</h1>
+                <p>
+                  Create an account to save recipes and join our cooking
+                  community
+                </p>
+              </div>
+
+              <form class="auth-form" id="signup-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input
+                      type="text"
+                      id="first-name"
+                      name="firstName"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input
+                      type="text"
+                      id="last-name"
+                      name="lastName"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="signup-email">Email Address</label>
+                  <input type="email" id="signup-email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="signup-password">Password</label>
+                  <input
+                    type="password"
+                    id="signup-password"
+                    name="password"
+                    required
+                  />
+                  <small>Password must be at least 8 characters long</small>
+                </div>
+
+                <div class="form-group">
+                  <label for="confirm-password">Confirm Password</label>
+                  <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirmPassword"
+                    required
+                  />
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="terms" name="terms" required />
+                    <span class="checkmark"></span>
+                    I agree to the <a href="#">Terms of Service</a> and
+                    <a href="#">Privacy Policy</a>
+                  </label>
+                </div>
+
+                <div class="form-group checkbox-group">
+                  <label class="checkbox-label">
+                    <input
+                      type="checkbox"
+                      id="newsletter-signup"
+                      name="newsletter"
+                    />
+                    <span class="checkmark"></span>
+                    Subscribe to our newsletter for recipe updates
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary auth-btn">
+                  Create Account
+                </button>
+              </form>
+
+              <div class="auth-divider">
+                <span>or</span>
+              </div>
+
+              <div class="social-auth">
+                <button class="btn btn-social google-btn">
+                  <img
+                    src="https://img.icons8.com/color/24/000000/google-logo.png"
+                    alt="Google"
+                    width="20"
+                    height="20"
+                  />
+                  Sign up with Google
+                </button>
+                <button class="btn btn-social facebook-btn">
+                  <img
+                    src="https://img.icons8.com/color/24/000000/facebook-new.png"
+                    alt="Facebook"
+                    width="20"
+                    height="20"
+                  />
+                  Sign up with Facebook
+                </button>
+              </div>
+
+              <div class="auth-footer">
+                <p>
+                  Already have an account?
+                  <a href="#" id="show-login">Sign in</a>
+                </p>
+              </div>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="auth-benefits">
+              <h2>Why Create an Account?</h2>
+              <div class="benefits-list">
+                <div class="benefit-item">
+                  <div class="benefit-icon">💾</div>
+                  <div class="benefit-content">
+                    <h3>Save Your Favorites</h3>
+                    <p>Keep track of recipes you love and want to cook again</p>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon">📝</div>
+                  <div class="benefit-content">
+                    <h3>Personal Recipe Notes</h3>
+                    <p>Add your own notes and modifications to recipes</p>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon">🎯</div>
+                  <div class="benefit-content">
+                    <h3>Personalized Recommendations</h3>
+                    <p>Get recipe suggestions based on your preferences</p>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon">📱</div>
+                  <div class="benefit-content">
+                    <h3>Sync Across Devices</h3>
+                    <p>Access your saved recipes from any device</p>
+                  </div>
+                </div>
+
+                <div class="benefit-item">
+                  <div class="benefit-icon">👥</div>
+                  <div class="benefit-content">
+                    <h3>Join the Community</h3>
+                    <p>Share recipes and connect with fellow food lovers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer role="contentinfo" aria-label="Site footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section about-us" aria-labelledby="about-title">
-                    <h3 id="about-title">About FlavorCraft</h3>
-                    <p>
-                        FlavorCraft is your ultimate culinary companion, bringing together passionate cooks from around the world. 
-                        We believe that great food brings people together and that everyone can learn to cook amazing meals.
-                    </p>
-                    <div class="social-links" role="group" aria-label="Social media links">
-                        <a href="#" class="social-link facebook" aria-label="Follow us on Facebook">
-                            <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="24" height="24">
-                        </a>
-                        <a href="#" class="social-link twitter" aria-label="Follow us on Twitter">
-                            <img src="https://img.icons8.com/fluency/48/000000/twitter.png" alt="Twitter" width="24" height="24">
-                        </a>
-                        <a href="#" class="social-link instagram" aria-label="Follow us on Instagram">
-                            <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Instagram" width="24" height="24">
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-section quick-links" aria-labelledby="links-title">
-                    <h3 id="links-title">Quick Links</h3>
-                    <ul role="menu">
-                        <li role="none"><a href="/meals.html" role="menuitem">All Recipes</a></li>
-                        <li role="none"><a href="/about.html" role="menuitem">About Us</a></li>
-                        <li role="none"><a href="/contact.html" role="menuitem">Contact</a></li>
-                        <li role="none"><a href="/saved-recipes.html" role="menuitem">Saved Recipes</a></li>
-                        <li role="none"><a href="/login.html" role="menuitem">Login</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section contact-info" aria-labelledby="contact-title">
-                    <h3 id="contact-title">Get in Touch</h3>
-                    <div class="contact-item">
-                        <img src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png" alt="Address" width="16" height="16" aria-hidden="true">
-                        <span>123 Culinary Street<br>Flavor Town, FT 12345</span>
-                    </div>
-                    <div class="contact-item">
-                        <img src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png" alt="Phone" width="16" height="16" aria-hidden="true">
-                        <span>
-                            <a href="tel:+1234567890" aria-label="Call us at +1 234 567 8900">+1 (234) 567-8900</a>
-                        </span>
-                    </div>
-                    <div class="contact-item">
-                        <img src="https://img.icons8.com/material-rounded/24/000000/mail.png" alt="Email" width="16" height="16" aria-hidden="true">
-                        <span>
-                            <a href="mailto:hello@flavorcraft.com" aria-label="Send us an email">hello@flavorcraft.com</a>
-                        </span>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section about-us" aria-labelledby="about-title">
+            <h3 id="about-title">About FlavorCraft</h3>
+            <p>
+              FlavorCraft is your ultimate culinary companion, bringing together
+              passionate cooks from around the world. We believe that great food
+              brings people together and that everyone can learn to cook amazing
+              meals.
+            </p>
+            <div
+              class="social-links"
+              role="group"
+              aria-label="Social media links"
+            >
+              <a
+                href="#"
+                class="social-link facebook"
+                aria-label="Follow us on Facebook"
+              >
+                <img
+                  src="https://img.icons8.com/color/48/000000/facebook-new.png"
+                  alt="Facebook"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="#"
+                class="social-link twitter"
+                aria-label="Follow us on Twitter"
+              >
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/twitter.png"
+                  alt="Twitter"
+                  width="24"
+                  height="24"
+                />
+              </a>
+              <a
+                href="#"
+                class="social-link instagram"
+                aria-label="Follow us on Instagram"
+              >
+                <img
+                  src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
+                  alt="Instagram"
+                  width="24"
+                  height="24"
+                />
+              </a>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 FlavorCraft. All rights reserved. Made with ❤️ for food lovers everywhere.</p>
-                <div class="footer-links">
-                    <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
-                    <a href="#terms" aria-label="Terms of Service">Terms of Service</a>
-                    <a href="#cookies" aria-label="Cookie Policy">Cookie Policy</a>
-                </div>
+          </div>
+
+          <div class="footer-section quick-links" aria-labelledby="links-title">
+            <h3 id="links-title">Quick Links</h3>
+            <ul role="menu">
+              <li role="none">
+                <a href="/meals.html" role="menuitem">All Recipes</a>
+              </li>
+              <li role="none">
+                <a href="/about.html" role="menuitem">About Us</a>
+              </li>
+              <li role="none">
+                <a href="/contact.html" role="menuitem">Contact</a>
+              </li>
+              <li role="none">
+                <a href="/saved-recipes.html" role="menuitem">Saved Recipes</a>
+              </li>
+              <li role="none">
+                <a href="/login.html" role="menuitem">Login</a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="footer-section contact-info"
+            aria-labelledby="contact-title"
+          >
+            <h3 id="contact-title">Get in Touch</h3>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
+                alt="Address"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>123 Culinary Street<br />Flavor Town, FT 12345</span>
             </div>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
+                alt="Phone"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>
+                <a
+                  href="tel:+1234567890"
+                  aria-label="Call us at +1 234 567 8900"
+                  >+1 (234) 567-8900</a
+                >
+              </span>
+            </div>
+            <div class="contact-item">
+              <img
+                src="https://img.icons8.com/material-rounded/24/000000/mail.png"
+                alt="Email"
+                width="16"
+                height="16"
+                aria-hidden="true"
+              />
+              <span>
+                <a
+                  href="mailto:hello@flavorcraft.com"
+                  aria-label="Send us an email"
+                  >hello@flavorcraft.com</a
+                >
+              </span>
+            </div>
+          </div>
         </div>
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta
+              name="description"
+              content="Login to FlavorCraft - Access your saved recipes and personalized experience"
+            />
+            <meta
+              name="keywords"
+              content="FlavorCraft, Login, Account, Saved Recipes"
+            />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1.0"
+            />
+            <title>Login - FlavorCraft</title>
+            <link rel="stylesheet" href="/css/pages.css" />
+          </head>
+          <body>
+            <!-- NAVIGATION -->
+            <nav id="header">
+              <a href="/index.html" class="logo">FlavorCraft</a>
+              <div id="toggle"></div>
+              <div id="navbar">
+                <ul class="nav-links">
+                  <li><a href="/index.html">HOME</a></li>
+                  <li><a href="/meals.html">RECIPES</a></li>
+                  <li><a href="/about.html">ABOUT</a></li>
+                  <li><a href="/contact.html">CONTACT</a></li>
+                  <li><a href="/saved-recipes.html">SAVED</a></li>
+                  <li><a href="/login.html">LOGIN</a></li>
+                </ul>
+              </div>
+            </nav>
+
+            <script src="/js/app.js"></script>
+
+            <!-- MAIN CONTENT -->
+            <main class="login-page">
+              <div class="container">
+                <div class="auth-container">
+                  <div class="auth-card">
+                    <div class="auth-header">
+                      <h1>Welcome to FlavorCraft</h1>
+                      <p>
+                        Sign in to access your saved recipes and personalized
+                        experience
+                      </p>
+                    </div>
+
+                    <!-- Login Form -->
+                    <div id="loginForm" class="auth-form active">
+                      <form onsubmit="handleLogin(event)">
+                        <div class="form-group">
+                          <label for="loginEmail">Email Address</label>
+                          <input
+                            type="email"
+                            id="loginEmail"
+                            name="email"
+                            required
+                            placeholder="Enter your email"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="loginPassword">Password</label>
+                          <input
+                            type="password"
+                            id="loginPassword"
+                            name="password"
+                            required
+                            placeholder="Enter your password"
+                          />
+                        </div>
+
+                        <div class="form-options">
+                          <label class="checkbox-container">
+                            <input type="checkbox" name="remember" />
+                            <span class="checkmark"></span>
+                            Remember me
+                          </label>
+                          <a href="#" class="forgot-password"
+                            >Forgot Password?</a
+                          >
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width">
+                          Sign In
+                        </button>
+                      </form>
+
+                      <div class="auth-divider">
+                        <span>or</span>
+                      </div>
+
+                      <div class="social-auth">
+                        <button
+                          class="btn-social google"
+                          onclick="handleSocialLogin('google')"
+                        >
+                          <img
+                            src="https://img.icons8.com/color/20/000000/google-logo.png"
+                            alt="Google"
+                          />
+                          Continue with Google
+                        </button>
+                        <button
+                          class="btn-social facebook"
+                          onclick="handleSocialLogin('facebook')"
+                        >
+                          <img
+                            src="https://img.icons8.com/color/20/000000/facebook-new.png"
+                            alt="Facebook"
+                          />
+                          Continue with Facebook
+                        </button>
+                      </div>
+
+                      <div class="auth-switch">
+                        <p>
+                          Don't have an account?
+                          <a href="#" onclick="showSignup()">Sign up here</a>
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Sign Up Form -->
+                    <div id="signupForm" class="auth-form">
+                      <form onsubmit="handleSignup(event)">
+                        <div class="form-group">
+                          <label for="signupName">Full Name</label>
+                          <input
+                            type="text"
+                            id="signupName"
+                            name="name"
+                            required
+                            placeholder="Enter your full name"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="signupEmail">Email Address</label>
+                          <input
+                            type="email"
+                            id="signupEmail"
+                            name="email"
+                            required
+                            placeholder="Enter your email"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="signupPassword">Password</label>
+                          <input
+                            type="password"
+                            id="signupPassword"
+                            name="password"
+                            required
+                            placeholder="Create a password"
+                            minlength="6"
+                          />
+                        </div>
+
+                        <div class="form-group">
+                          <label for="confirmPassword">Confirm Password</label>
+                          <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            required
+                            placeholder="Confirm your password"
+                          />
+                        </div>
+
+                        <div class="form-options">
+                          <label class="checkbox-container">
+                            <input type="checkbox" name="terms" required />
+                            <span class="checkmark"></span>
+                            I agree to the
+                            <a href="#" class="terms-link">Terms of Service</a>
+                            and
+                            <a href="#" class="privacy-link">Privacy Policy</a>
+                          </label>
+                        </div>
+
+                        <button type="submit" class="btn-primary full-width">
+                          Create Account
+                        </button>
+                      </form>
+
+                      <div class="auth-divider">
+                        <span>or</span>
+                      </div>
+
+                      <div class="social-auth">
+                        <button
+                          class="btn-social google"
+                          onclick="handleSocialLogin('google')"
+                        >
+                          <img
+                            src="https://img.icons8.com/color/20/000000/google-logo.png"
+                            alt="Google"
+                          />
+                          Continue with Google
+                        </button>
+                        <button
+                          class="btn-social facebook"
+                          onclick="handleSocialLogin('facebook')"
+                        >
+                          <img
+                            src="https://img.icons8.com/color/20/000000/facebook-new.png"
+                            alt="Facebook"
+                          />
+                          Continue with Facebook
+                        </button>
+                      </div>
+
+                      <div class="auth-switch">
+                        <p>
+                          Already have an account?
+                          <a href="#" onclick="showLogin()">Sign in here</a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Features Sidebar -->
+                  <div class="features-sidebar">
+                    <h2>Join FlavorCraft Today</h2>
+                    <ul class="feature-list">
+                      <li>
+                        <div class="feature-icon">💾</div>
+                        <div class="feature-text">
+                          <h3>Save Your Favorites</h3>
+                          <p>
+                            Keep all your favorite recipes in one place for easy
+                            access
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="feature-icon">📱</div>
+                        <div class="feature-text">
+                          <h3>Sync Across Devices</h3>
+                          <p>
+                            Access your saved recipes from any device, anywhere
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="feature-icon">🎯</div>
+                        <div class="feature-text">
+                          <h3>Personalized Experience</h3>
+                          <p>
+                            Get recipe recommendations based on your preferences
+                          </p>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="feature-icon">👥</div>
+                        <div class="feature-text">
+                          <h3>Join the Community</h3>
+                          <p>
+                            Connect with other food lovers and share your
+                            creations
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </main>
+
+            <!-- FOOTER -->
+            <footer>
+              <div class="container">
+                <div class="sec about-us">
+                  <h2>About FlavorCraft</h2>
+                  <p>
+                    FlavorCraft is your ultimate destination for discovering,
+                    saving, and sharing amazing recipes. We believe that great
+                    cooking starts with great recipes, and every meal should be
+                    a delightful experience.
+                  </p>
+                  <ul class="sec smlinks">
+                    <li>
+                      <a href="#" class="facebook">
+                        <img
+                          src="https://img.icons8.com/color/48/000000/facebook-new.png"
+                          alt="Facebook"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="twitter">
+                        <img
+                          src="https://img.icons8.com/fluency/48/000000/twitter.png"
+                          alt="Twitter"
+                        />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="instagram">
+                        <img
+                          src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
+                          alt="Instagram"
+                        />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sec quick-links">
+                  <h2>Quick Links</h2>
+                  <ul class="info">
+                    <li>
+                      <span
+                        ><i class="phone-img" aria-hidden="true"
+                          ><img
+                            src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
+                            alt="Location" /></i
+                      ></span>
+                      <span
+                        >123 Culinary Street<br />Food City, FC 12345<br />USA</span
+                      >
+                    </li>
+                    <li>
+                      <span
+                        ><i class="mail-img" aria-hidden="true"
+                          ><img
+                            src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
+                            alt="Phone" /></i
+                      ></span>
+                      <p>
+                        <a href="tel:+1234567890">+1 (234) 567-8900</a><br /><a
+                          href="tel:+1234567891"
+                          >+1 (234) 567-8901</a
+                        >
+                      </p>
+                    </li>
+                    <li>
+                      <span
+                        ><i class="env-img" aria-hidden="true"
+                          ><img
+                            src="https://img.icons8.com/material-rounded/24/000000/mail.png"
+                            alt="Email" /></i
+                      ></span>
+                      <p>
+                        <a href="mailto:hello@flavorcraft.com"
+                          >hello@flavorcraft.com</a
+                        >
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </footer>
+
+            <script>
+              // Authentication Functions
+              function showLogin() {
+                document.getElementById("loginForm").classList.add("active");
+                document
+                  .getElementById("signupForm")
+                  .classList.remove("active");
+              }
+
+              function showSignup() {
+                document.getElementById("signupForm").classList.add("active");
+                document.getElementById("loginForm").classList.remove("active");
+              }
+
+              function handleLogin(event) {
+                event.preventDefault();
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData);
+
+                // Simulate login process
+                console.log("Login attempt:", data);
+
+                // Set user as logged in
+                localStorage.setItem(
+                  "flavorcraft_user",
+                  JSON.stringify({
+                    email: data.email,
+                    name: data.email.split("@")[0],
+                    loginTime: new Date().toISOString(),
+                  })
+                );
+
+                showNotification(
+                  "Welcome back! You have been successfully logged in.",
+                  "success"
+                );
+
+                // Redirect to home page after 1.5 seconds
+                setTimeout(() => {
+                  window.location.href = "/index.html";
+                }, 1500);
+              }
+
+              function handleSignup(event) {
+                event.preventDefault();
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData);
+
+                // Check if passwords match
+                if (data.password !== data.confirmPassword) {
+                  showNotification(
+                    "Passwords do not match. Please try again.",
+                    "error"
+                  );
+                  return;
+                }
+
+                // Simulate signup process
+                console.log("Signup attempt:", data);
+
+                // Set user as logged in
+                localStorage.setItem(
+                  "flavorcraft_user",
+                  JSON.stringify({
+                    email: data.email,
+                    name: data.name,
+                    signupTime: new Date().toISOString(),
+                  })
+                );
+
+                showNotification(
+                  "Account created successfully! Welcome to FlavorCraft!",
+                  "success"
+                );
+
+                // Redirect to home page after 1.5 seconds
+                setTimeout(() => {
+                  window.location.href = "/index.html";
+                }, 1500);
+              }
+
+              function handleSocialLogin(provider) {
+                // Simulate social login
+                const userData = {
+                  email: `user@${provider}.com`,
+                  name: `${
+                    provider.charAt(0).toUpperCase() + provider.slice(1)
+                  } User`,
+                  provider: provider,
+                  loginTime: new Date().toISOString(),
+                };
+
+                localStorage.setItem(
+                  "flavorcraft_user",
+                  JSON.stringify(userData)
+                );
+                showNotification(
+                  `Successfully signed in with ${provider}!`,
+                  "success"
+                );
+
+                setTimeout(() => {
+                  window.location.href = "/index.html";
+                }, 1500);
+              }
+
+              // Check if user is already logged in
+              document.addEventListener("DOMContentLoaded", function () {
+                const user = localStorage.getItem("flavorcraft_user");
+                if (user) {
+                  showNotification("You are already logged in!", "info");
+                  setTimeout(() => {
+                    window.location.href = "/index.html";
+                  }, 1000);
+                }
+              });
+            </script>
+          </body>
+        </html>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2024 FlavorCraft. All rights reserved. Made with ❤️ for food
+            lovers everywhere.
+          </p>
+          <div class="footer-links">
+            <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
+            <a href="#terms" aria-label="Terms of Service">Terms of Service</a>
+            <a href="#cookies" aria-label="Cookie Policy">Cookie Policy</a>
+          </div>
+        </div>
+      </div>
     </footer>
 
     <!-- Back to top button -->
-    <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Back to top"
+      title="Back to top"
+    >
+      ↑
+    </button>
 
     <!-- Scripts -->
     <script src="/js/app.js" defer></script>
-</body>
+  </body>
 </html>

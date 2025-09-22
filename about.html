@@ -1,467 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Essential Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- SEO Meta Tags -->
-    <title>About Us - FlavorCraft | Our Story & Mission</title>
     <meta
       name="description"
-      content="Learn about FlavorCraft's mission to bring together passionate cooks from around the world. Discover our story, values, and commitment to making cooking accessible and enjoyable for everyone."
+      content="About FlavorCraft - Learn about our mission to bring you the best recipes"
     />
     <meta
       name="keywords"
-      content="about FlavorCraft, cooking community, recipe platform, culinary mission, food lovers, cooking education"
+      content="FlavorCraft, About, Recipes, Cooking, Mission"
     />
-    <meta name="author" content="FlavorCraft Team" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://flavorcraft.com/about.html" />
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/meal.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - FlavorCraft</title>
+    <link rel="stylesheet" href="/css/pages.css" />
   </head>
   <body>
-    <!-- Skip to main content for accessibility -->
-    <a href="#main-content" class="skip-link" aria-label="Skip to main content"
-      >Skip to main content</a
-    >
+    <!-- NAVIGATION -->
+    <nav id="header">
+      <a href="/index.html" class="logo">FlavorCraft</a>
+      <div id="toggle"></div>
+      <div id="navbar">
+        <ul class="nav-links">
+          <li><a href="/index.html">HOME</a></li>
+          <li><a href="/meals.html">RECIPES</a></li>
+          <li><a href="/about.html">ABOUT</a></li>
+          <li><a href="/contact.html">CONTACT</a></li>
+          <li><a href="/saved-recipes.html">SAVED</a></li>
+          <li><a href="/login.html">LOGIN</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <!-- Header Navigation -->
-    <header role="banner">
-      <nav id="header" role="navigation" aria-label="Main navigation">
-        <a href="index.html" class="logo" aria-label="FlavorCraft home">
-          <span class="logo-icon">🍽️</span>
-          <span class="logo-text">FlavorCraft</span>
-        </a>
+    <script src="/js/app.js"></script>
 
-        <!-- Mobile menu toggle -->
-        <button
-          id="toggle"
-          class="menu-toggle"
-          aria-label="Toggle mobile menu"
-          aria-expanded="false"
-          aria-controls="navbar"
-        >
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+    <!-- HERO SECTION -->
+    <section class="page-hero">
+      <div class="hero-content">
+        <h1>About FlavorCraft</h1>
+        <p>Crafting culinary experiences, one recipe at a time</p>
+      </div>
+    </section>
 
-        <!-- Navigation menu -->
-        <div id="navbar" class="navbar" role="menu">
-          <ul class="nav-links" role="menubar">
-            <li role="none"><a href="/index.html" role="menuitem">Home</a></li>
-            <li role="none">
-              <a href="/meals.html" role="menuitem">Recipes</a>
-            </li>
-            <li role="none">
-              <a href="/about.html" role="menuitem" aria-current="page"
-                >About</a
-              >
-            </li>
-            <li role="none">
-              <a href="/contact.html" role="menuitem">Contact</a>
-            </li>
-            <li role="none">
-              <a href="/saved-recipes.html" role="menuitem">Saved Recipes</a>
-            </li>
-            <li role="none">
-              <a href="/login.html" role="menuitem" class="login-btn">Log In</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-content" role="main">
-      <!-- Page Header -->
-      <section class="page-hero" aria-labelledby="page-title">
-        <div class="container">
-          <div class="page-header">
-            <h1 id="page-title">About FlavorCraft</h1>
-            <p class="page-subtitle">Where culinary passion meets community</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Content -->
-      <section class="about-content">
-        <div class="container">
-          <!-- Mission Section -->
-          <div class="content-section">
-            <div class="content-grid">
-              <div class="content-text">
-                <h2>Our Mission</h2>
-                <p>
-                  At FlavorCraft, we believe that great food brings people
-                  together and that everyone can learn to cook amazing meals.
-                  Our mission is to make cooking accessible, enjoyable, and
-                  inspiring for home cooks of all skill levels.
-                </p>
-                <p>
-                  We curate the finest recipes from around the world, provide
-                  detailed cooking instructions, and create a supportive
-                  community where food lovers can share their culinary
-                  adventures.
-                </p>
-              </div>
-              <div class="content-image">
-                <img
-                  src="/img/pan-seared-salmon.jpg"
-                  alt="Beautiful plated dish representing our culinary mission"
-                  loading="lazy"
-                />
-              </div>
+    <!-- MAIN CONTENT -->
+    <main class="page-content">
+      <div class="container">
+        <!-- Our Story Section -->
+        <section class="content-section">
+          <div class="section-content">
+            <div class="text-content">
+              <h2>Our Story</h2>
+              <p>
+                FlavorCraft was born from a simple belief: that great cooking
+                starts with great recipes, and every meal should be a delightful
+                experience. Founded by passionate food enthusiasts, we've
+                curated a collection of recipes that blend traditional
+                techniques with modern innovation.
+              </p>
+              <p>
+                Our journey began in a small kitchen where we experimented with
+                flavors, tested countless recipes, and discovered the magic that
+                happens when fresh ingredients meet creative techniques. Today,
+                we're proud to share that passion with food lovers around the
+                world.
+              </p>
+            </div>
+            <div class="image-content">
+              <img src="/img/pan-seared-salmon.jpg" alt="Cooking in action" />
             </div>
           </div>
+        </section>
 
-          <!-- Story Section -->
-          <div class="content-section">
-            <div class="content-grid reverse">
-              <div class="content-text">
-                <h2>Our Story</h2>
-                <p>
-                  FlavorCraft was born from a simple idea: cooking should be a
-                  joyful experience, not a stressful chore. Founded by a team of
-                  passionate food enthusiasts, we started with a small
-                  collection of family recipes and a dream to share them with
-                  the world.
-                </p>
-                <p>
-                  Today, we've grown into a thriving community of over 10,000
-                  home cooks who share our love for creating delicious,
-                  memorable meals. Every recipe on our platform is tested,
-                  refined, and loved by real people in real kitchens.
-                </p>
-              </div>
-              <div class="content-image">
-                <img
-                  src="/img/curried-shrimp.jpg"
-                  alt="Delicious curry dish representing our recipe heritage"
-                  loading="lazy"
-                />
-              </div>
+        <!-- Mission Section -->
+        <section class="content-section alternate">
+          <div class="section-content">
+            <div class="image-content">
+              <img
+                src="/img/curried-shrimp.jpg"
+                alt="Beautiful dish presentation"
+              />
+            </div>
+            <div class="text-content">
+              <h2>Our Mission</h2>
+              <p>
+                We're on a mission to make exceptional cooking accessible to
+                everyone. Whether you're a seasoned chef or just starting your
+                culinary journey, FlavorCraft provides you with carefully tested
+                recipes, helpful tips, and the inspiration you need to create
+                memorable meals.
+              </p>
+              <p>
+                Every recipe in our collection has been thoughtfully selected
+                and thoroughly tested to ensure it delivers both in flavor and
+                presentation. We believe cooking should be joyful, creative, and
+                rewarding.
+              </p>
             </div>
           </div>
+        </section>
 
-          <!-- Values Section -->
-          <div class="values-section">
-            <h2>Our Values</h2>
-            <div class="values-grid">
-              <div class="value-card">
-                <div class="value-icon">🏠</div>
-                <h3>Home-Centered</h3>
-                <p>
-                  Every recipe is designed for the home kitchen, using
-                  accessible ingredients and equipment that most people already
-                  have.
-                </p>
-              </div>
-
-              <div class="value-card">
-                <div class="value-icon">👥</div>
-                <h3>Community-Driven</h3>
-                <p>
-                  Our community of passionate cooks contributes recipes, tips,
-                  and feedback that make every dish better.
-                </p>
-              </div>
-
-              <div class="value-card">
-                <div class="value-icon">📚</div>
-                <h3>Educational</h3>
-                <p>
-                  We don't just share recipes – we teach techniques, explain
-                  ingredients, and help you become a better cook.
-                </p>
-              </div>
-
-              <div class="value-card">
-                <div class="value-icon">🌍</div>
-                <h3>Globally Inspired</h3>
-                <p>
-                  Our recipes celebrate cuisines from around the world, bringing
-                  diverse flavors to your kitchen.
-                </p>
-              </div>
-
-              <div class="value-card">
-                <div class="value-icon">✨</div>
-                <h3>Quality-First</h3>
-                <p>
-                  Every recipe is carefully tested and reviewed to ensure
-                  consistent, delicious results every time.
-                </p>
-              </div>
-
-              <div class="value-card">
-                <div class="value-icon">♿</div>
-                <h3>Accessible</h3>
-                <p>
-                  We believe great food should be accessible to everyone,
-                  regardless of skill level, budget, or dietary needs.
-                </p>
-              </div>
+        <!-- Values Section -->
+        <section class="values-section">
+          <h2>What We Stand For</h2>
+          <div class="values-grid">
+            <div class="value-card">
+              <div class="value-icon">🌟</div>
+              <h3>Quality First</h3>
+              <p>
+                Every recipe is carefully tested and curated to ensure
+                exceptional results every time you cook.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🤝</div>
+              <h3>Community</h3>
+              <p>
+                We believe in bringing people together through food and creating
+                a supportive community of cooking enthusiasts.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">🎯</div>
+              <h3>Accessibility</h3>
+              <p>
+                Great cooking should be accessible to everyone, regardless of
+                skill level or kitchen equipment.
+              </p>
+            </div>
+            <div class="value-card">
+              <div class="value-icon">💡</div>
+              <h3>Innovation</h3>
+              <p>
+                We continuously explore new flavors, techniques, and trends to
+                keep your cooking exciting and fresh.
+              </p>
             </div>
           </div>
+        </section>
 
-          <!-- Team Section -->
-          <div class="team-section">
-            <h2>Meet Our Team</h2>
-            <div class="team-grid">
-              <div class="team-member">
-                <div class="member-photo">
-                  <img
-                    src="/img/lobster-ravioli.jpg"
-                    alt="Chef Profile"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="member-info">
-                  <h3>Sarah Johnson</h3>
-                  <p class="member-role">Head Chef & Recipe Developer</p>
-                  <p>
-                    With 15 years of culinary experience, Sarah leads our recipe
-                    development team and ensures every dish meets our high
-                    standards.
-                  </p>
-                </div>
+        <!-- Team Section -->
+        <section class="team-section">
+          <h2>Meet Our Team</h2>
+          <div class="team-grid">
+            <div class="team-member">
+              <div class="member-photo">
+                <div class="photo-placeholder">👨‍🍳</div>
               </div>
-
-              <div class="team-member">
-                <div class="member-photo">
-                  <img
-                    src="/img/pan-seared-steak.jpg"
-                    alt="Community Manager Profile"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="member-info">
-                  <h3>Michael Chen</h3>
-                  <p class="member-role">Community Manager</p>
-                  <p>
-                    Michael connects with our amazing community of home cooks,
-                    gathering feedback and fostering connections through food.
-                  </p>
-                </div>
+              <h3>Chef Marcus Johnson</h3>
+              <p class="role">Head Chef & Recipe Developer</p>
+              <p>
+                With over 15 years of culinary experience, Marcus brings
+                professional techniques to home cooking.
+              </p>
+            </div>
+            <div class="team-member">
+              <div class="member-photo">
+                <div class="photo-placeholder">👩‍🍳</div>
               </div>
-
-              <div class="team-member">
-                <div class="member-photo">
-                  <img
-                    src="/img/steakhouse-salad.jpg"
-                    alt="Nutritionist Profile"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="member-info">
-                  <h3>Dr. Emily Rodriguez</h3>
-                  <p class="member-role">Nutritionist & Health Expert</p>
-                  <p>
-                    Emily ensures our recipes not only taste great but also
-                    support healthy eating habits and dietary preferences.
-                  </p>
-                </div>
+              <h3>Sarah Chen</h3>
+              <p class="role">Food Stylist & Photographer</p>
+              <p>
+                Sarah captures the beauty of our dishes and ensures every recipe
+                looks as good as it tastes.
+              </p>
+            </div>
+            <div class="team-member">
+              <div class="member-photo">
+                <div class="photo-placeholder">👨‍💻</div>
               </div>
+              <h3>David Rodriguez</h3>
+              <p class="role">Nutritionist & Recipe Tester</p>
+              <p>
+                David ensures our recipes are not only delicious but also
+                nutritionally balanced and well-tested.
+              </p>
             </div>
           </div>
+        </section>
 
-          <!-- Statistics Section -->
-          <div class="about-stats">
-            <h2>FlavorCraft by the Numbers</h2>
-            <div class="stats-grid">
-              <div class="stat-item">
-                <span class="stat-number">500+</span>
-                <span class="stat-label">Tested Recipes</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">10K+</span>
-                <span class="stat-label">Community Members</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">50+</span>
-                <span class="stat-label">Countries Represented</span>
-              </div>
-              <div class="stat-item">
-                <span class="stat-number">95%</span>
-                <span class="stat-label">Recipe Success Rate</span>
-              </div>
-            </div>
+        <!-- CTA Section -->
+        <section class="cta-section">
+          <h2>Start Your Culinary Journey</h2>
+          <p>
+            Ready to discover amazing recipes and elevate your cooking? Join
+            thousands of food lovers who trust FlavorCraft for their culinary
+            inspiration.
+          </p>
+          <div class="cta-buttons">
+            <a href="/meals.html" class="btn-primary">Explore Recipes</a>
+            <a href="/contact.html" class="btn-secondary">Get in Touch</a>
           </div>
-
-          <!-- Call to Action -->
-          <div class="cta-section">
-            <h2>Join Our Culinary Journey</h2>
-            <p>
-              Ready to transform your cooking? Explore our recipes, join our
-              community, and discover the joy of creating delicious meals at
-              home.
-            </p>
-            <div class="cta-buttons">
-              <a href="/meals.html" class="btn btn-primary">Explore Recipes</a>
-              <a href="/contact.html" class="btn btn-secondary">Get In Touch</a>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
 
-    <!-- Footer -->
-    <footer role="contentinfo" aria-label="Site footer">
+    <!-- FOOTER -->
+    <footer>
       <div class="container">
-        <div class="footer-content">
-          <div class="footer-section about-us" aria-labelledby="about-title">
-            <h3 id="about-title">About FlavorCraft</h3>
-            <p>
-              FlavorCraft is your ultimate culinary companion, bringing together
-              passionate cooks from around the world. We believe that great food
-              brings people together and that everyone can learn to cook amazing
-              meals.
-            </p>
-            <div
-              class="social-links"
-              role="group"
-              aria-label="Social media links"
-            >
-              <a
-                href="#"
-                class="social-link facebook"
-                aria-label="Follow us on Facebook"
-              >
+        <div class="sec about-us">
+          <h2>About FlavorCraft</h2>
+          <p>
+            FlavorCraft is your ultimate destination for discovering, saving,
+            and sharing amazing recipes. We believe that great cooking starts
+            with great recipes, and every meal should be a delightful
+            experience.
+          </p>
+          <ul class="sec smlinks">
+            <li>
+              <a href="#" class="facebook">
                 <img
                   src="https://img.icons8.com/color/48/000000/facebook-new.png"
                   alt="Facebook"
-                  width="24"
-                  height="24"
                 />
               </a>
-              <a
-                href="#"
-                class="social-link twitter"
-                aria-label="Follow us on Twitter"
-              >
+            </li>
+            <li>
+              <a href="#" class="twitter">
                 <img
                   src="https://img.icons8.com/fluency/48/000000/twitter.png"
                   alt="Twitter"
-                  width="24"
-                  height="24"
                 />
               </a>
-              <a
-                href="#"
-                class="social-link instagram"
-                aria-label="Follow us on Instagram"
-              >
+            </li>
+            <li>
+              <a href="#" class="instagram">
                 <img
                   src="https://img.icons8.com/fluency/48/000000/instagram-new.png"
                   alt="Instagram"
-                  width="24"
-                  height="24"
                 />
               </a>
-            </div>
-          </div>
-
-          <div class="footer-section quick-links" aria-labelledby="links-title">
-            <h3 id="links-title">Quick Links</h3>
-            <ul role="menu">
-              <li role="none">
-                <a href="/meals.html" role="menuitem">All Recipes</a>
-              </li>
-              <li role="none">
-                <a href="/about.html" role="menuitem">About Us</a>
-              </li>
-              <li role="none">
-                <a href="/contact.html" role="menuitem">Contact</a>
-              </li>
-              <li role="none">
-                <a href="/saved-recipes.html" role="menuitem">Saved Recipes</a>
-              </li>
-              <li role="none">
-                <a href="/login.html" role="menuitem">Login</a>
-              </li>
-            </ul>
-          </div>
-
-          <div
-            class="footer-section contact-info"
-            aria-labelledby="contact-title"
-          >
-            <h3 id="contact-title">Get in Touch</h3>
-            <div class="contact-item">
-              <img
-                src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
-                alt="Address"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              />
-              <span>123 Culinary Street<br />Flavor Town, FT 12345</span>
-            </div>
-            <div class="contact-item">
-              <img
-                src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
-                alt="Phone"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              />
-              <span>
-                <a
-                  href="tel:+1234567890"
-                  aria-label="Call us at +1 234 567 8900"
-                  >+1 (234) 567-8900</a
-                >
-              </span>
-            </div>
-            <div class="contact-item">
-              <img
-                src="https://img.icons8.com/material-rounded/24/000000/mail.png"
-                alt="Email"
-                width="16"
-                height="16"
-                aria-hidden="true"
-              />
-              <span>
-                <a
-                  href="mailto:hello@flavorcraft.com"
-                  aria-label="Send us an email"
-                  >hello@flavorcraft.com</a
-                >
-              </span>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
-
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 FlavorCraft. All rights reserved. Made with ❤️ for food
-            lovers everywhere.
-          </p>
-          <div class="footer-links">
-            <a href="#privacy" aria-label="Privacy Policy">Privacy Policy</a>
-            <a href="#terms" aria-label="Terms of Service">Terms of Service</a>
-            <a href="#cookies" aria-label="Cookie Policy">Cookie Policy</a>
-          </div>
+        <div class="sec quick-links">
+          <h2>Quick Links</h2>
+          <ul class="info">
+            <li>
+              <span
+                ><i class="phone-img" aria-hidden="true"
+                  ><img
+                    src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/000000/external-map-back-to-school-kmg-design-glyph-kmg-design.png"
+                    alt="Location" /></i
+              ></span>
+              <span>123 Culinary Street<br />Food City, FC 12345<br />USA</span>
+            </li>
+            <li>
+              <span
+                ><i class="mail-img" aria-hidden="true"
+                  ><img
+                    src="https://img.icons8.com/ios-glyphs/30/000000/phone--v1.png"
+                    alt="Phone" /></i
+              ></span>
+              <p>
+                <a href="tel:+1234567890">+1 (234) 567-8900</a><br /><a
+                  href="tel:+1234567891"
+                  >+1 (234) 567-8901</a
+                >
+              </p>
+            </li>
+            <li>
+              <span
+                ><i class="env-img" aria-hidden="true"
+                  ><img
+                    src="https://img.icons8.com/material-rounded/24/000000/mail.png"
+                    alt="Email" /></i
+              ></span>
+              <p>
+                <a href="mailto:hello@flavorcraft.com">hello@flavorcraft.com</a>
+              </p>
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
-
-    <!-- Back to top button -->
-    <button
-      id="back-to-top"
-      class="back-to-top"
-      aria-label="Back to top"
-      title="Back to top"
-    >
-      ↑
-    </button>
-
-    <!-- Scripts -->
-    <script src="/js/app.js" defer></script>
   </body>
 </html>
